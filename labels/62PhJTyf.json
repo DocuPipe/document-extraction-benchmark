@@ -1,0 +1,147 @@
+{
+  "companyName": "Voorbeeld onderneming te Hoofddorp",
+  "balanceSheetDate": "2015-12-31",
+  "totalActiva": 55725.0,
+  "totalPassiva": 55725.0,
+  "resultaat": 50337.0,
+  "balanceSheet": [
+    {
+      "lineItem": "Website",
+      "amount": 7456.0
+    },
+    {
+      "lineItem": "Bedrijfsgebouwen en -terreinen",
+      "amount": 1619.0
+    },
+    {
+      "lineItem": "Machines en installaties",
+      "amount": 2655.0
+    },
+    {
+      "lineItem": "Inventaris",
+      "amount": 2881.0
+    },
+    {
+      "lineItem": "Vervoermiddelen",
+      "amount": 4998.0
+    },
+    {
+      "lineItem": "Materiële vaste activa",
+      "amount": 12153.0
+    },
+    {
+      "lineItem": "Overige vorderingen",
+      "amount": 1033.0
+    },
+    {
+      "lineItem": "Handelsdebiteuren",
+      "amount": 11161.0
+    },
+    {
+      "lineItem": "Overlopende activa",
+      "amount": 27.0
+    },
+    {
+      "lineItem": "Vorderingen",
+      "amount": 11188.0
+    },
+    {
+      "lineItem": "Liquide middelen",
+      "amount": 23895.0
+    },
+    {
+      "lineItem": "Firmant 1",
+      "amount": 27821.0
+    },
+    {
+      "lineItem": "Firmant 2",
+      "amount": 21316.0
+    },
+    {
+      "lineItem": "Ondernemingsvermogen",
+      "amount": 49137.0
+    },
+    {
+      "lineItem": "Schulden aan leveranciers en handelskredieten",
+      "amount": 1617.0
+    },
+    {
+      "lineItem": "Overige belastingen en premies sociale verzekeringen",
+      "amount": 4235.0
+    },
+    {
+      "lineItem": "Overlopende passiva",
+      "amount": 736.0
+    },
+    {
+      "lineItem": "Kortlopende schulden",
+      "amount": 6588.0
+    }
+  ],
+  "incomeStatement": [
+    {
+      "lineItem": "Netto-omzet",
+      "amount": 101685.0
+    },
+    {
+      "lineItem": "Kostprijs van de omzet",
+      "amount": 479.0
+    },
+    {
+      "lineItem": "Bruto-omzetresultaat",
+      "amount": 101206.0
+    },
+    {
+      "lineItem": "Personeelskosten",
+      "amount": 19212.0
+    },
+    {
+      "lineItem": "Afschrijvingen",
+      "amount": 4198.0
+    },
+    {
+      "lineItem": "Huisvestingskosten",
+      "amount": 6155.0
+    },
+    {
+      "lineItem": "Kantoorkosten",
+      "amount": 6395.0
+    },
+    {
+      "lineItem": "Autokosten",
+      "amount": 7073.0
+    },
+    {
+      "lineItem": "Verkoopkosten",
+      "amount": 3768.0
+    },
+    {
+      "lineItem": "Algemene kosten",
+      "amount": 3675.0
+    },
+    {
+      "lineItem": "Bijzondere baten en lasten",
+      "amount": 382.0
+    },
+    {
+      "lineItem": "Bedrijfsresultaat",
+      "amount": 50348.0
+    },
+    {
+      "lineItem": "Rentebaten en soortgelijke opbrengsten",
+      "amount": 207.0
+    },
+    {
+      "lineItem": "Rentelasten en soortgelijke kosten",
+      "amount": -218.0
+    },
+    {
+      "lineItem": "Financiële baten en lasten",
+      "amount": -11.0
+    },
+    {
+      "lineItem": "Resultaat",
+      "amount": 50337.0
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "patientName": {
+      "type": "string",
+      "description": "patient name (姓名), original Chinese"
+    },
+    "medicalRecordNumber": {
+      "type": "string",
+      "description": "medical record number (病歷號)"
+    },
+    "idNumber": {
+      "type": "string",
+      "description": "national ID number (身分證號) as printed, including masking"
+    },
+    "date": {
+      "type": "string",
+      "description": "receipt date (日期) in ROC era format as printed, e.g. 105/02/24"
+    },
+    "visitSequenceNumber": {
+      "type": "string",
+      "description": "visit sequence number (就醫序號)"
+    },
+    "visitDate": {
+      "type": "string",
+      "description": "visit date (就醫日期) in ROC era format as printed"
+    },
+    "department": {
+      "type": "string",
+      "description": "department / specialty (科別), original Chinese, e.g. 27200 產科"
+    },
+    "registrationFee": {
+      "type": "number",
+      "description": "registration fee (掛號費) under self-pay items"
+    },
+    "basicCopay": {
+      "type": "number",
+      "description": "basic-portion copay (基本部份負擔)"
+    },
+    "rehabCopay": {
+      "type": "number",
+      "description": "rehabilitation-portion copay (復健部份負擔)"
+    },
+    "drugCopay": {
+      "type": "number",
+      "description": "drug-portion copay (藥費部分負擔)"
+    },
+    "selfPayTotal": {
+      "type": "number",
+      "description": "total self-pay amount (自付費用金額合計)"
+    },
+    "amountDue": {
+      "type": "number",
+      "description": "amount payable (應繳餘額)"
+    },
+    "receiptAmount": {
+      "type": "number",
+      "description": "receipt amount collected (收據金額)"
+    },
+    "consultationPoints": {
+      "type": "number",
+      "description": "consultation-fee points (診察費) under NHI reported items"
+    },
+    "drugFeePoints": {
+      "type": "number",
+      "description": "drug-fee points (藥費)"
+    },
+    "treatmentPoints": {
+      "type": "number",
+      "description": "treatment/procedure points (治療處置費)"
+    },
+    "pharmacyServicePoints": {
+      "type": "number",
+      "description": "pharmacy-service-fee points (藥事服務費)"
+    },
+    "insuranceReportedTotalPoints": {
+      "type": "number",
+      "description": "total NHI reported points (健保申報點數合計)"
+    }
+  },
+  "required": [
+    "patientName",
+    "medicalRecordNumber",
+    "date",
+    "selfPayTotal",
+    "receiptAmount",
+    "insuranceReportedTotalPoints"
+  ]
+}

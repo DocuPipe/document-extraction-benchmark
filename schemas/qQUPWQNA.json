@@ -1,0 +1,122 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "rateYear": {
+      "type": "integer",
+      "description": "Tax year the arnona rates apply to (שנת הארנונה)"
+    },
+    "rateUnit": {
+      "type": "string",
+      "description": "Unit the rates are expressed in",
+      "enum": [
+        "NIS per square meter",
+        "NIS"
+      ]
+    },
+    "residentialRates": {
+      "type": "array",
+      "description": "Residential arnona rates by property class, one row per class, with the rate for each zone",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "propertyClass": {
+            "type": "string",
+            "description": "Residential property class (סוג הכנס)",
+            "enum": [
+              "א+",
+              "א",
+              "ב",
+              "ג",
+              "ד"
+            ]
+          },
+          "zoneARate": {
+            "type": "number",
+            "description": "Rate for zone א (אזור א') in NIS/m2"
+          },
+          "zoneBRate": {
+            "type": "number",
+            "description": "Rate for zone ב (אזור ב') in NIS/m2"
+          },
+          "zoneCRate": {
+            "type": "number",
+            "description": "Rate for zone ג (אזור ג') in NIS/m2"
+          },
+          "zoneDRate": {
+            "type": "number",
+            "description": "Rate for zone ד (אזור ד') in NIS/m2"
+          }
+        }
+      }
+    },
+    "officeAndCommercialRates": {
+      "type": "array",
+      "description": "Office, business and commerce arnona rates by zone, split by business area size band",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "zone": {
+            "type": "string",
+            "description": "Zone (אזור)",
+            "enum": [
+              "א",
+              "ב",
+              "ג",
+              "ד"
+            ]
+          },
+          "rateUpTo300sqm": {
+            "type": "number",
+            "description": "Rate for businesses up to 300 m2 (עסקים עד 300 מ\"ר) in NIS/m2"
+          },
+          "rateAbove300sqm": {
+            "type": "number",
+            "description": "Rate for businesses above 300 m2 (עסקים מעל 300 מ\"ר) in NIS/m2"
+          }
+        }
+      }
+    },
+    "propertyTypeRates": {
+      "type": "array",
+      "description": "arnona for property categories outside the residential and office/commerce tables; emit one row per distinct printed rate: if a category has per-zone or per-size-band sub-rates, emit a separate row for each sub-rate with zone/sizeBand set, otherwise set both to null",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "propertyType": {
+            "type": "string",
+            "description": "base property category WITHOUT the zone or size-band modifier, as printed (e.g. גני ילדים ומוסדות חינוך, בתי קולנוע, תעשיה, בתי תוכנה, בתי מלון)"
+          },
+          "rate": {
+            "type": "number",
+            "description": "Rate in NIS/m2"
+          },
+          "zone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "א",
+              "ב",
+              "ג",
+              "ד",
+              null
+            ],
+            "description": "zone modifier when the category is split by zone (אזור), else null"
+          },
+          "sizeBand": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "size-band or location modifier when the category is split by area/location, as printed, else null"
+          }
+        }
+      }
+    }
+  }
+}

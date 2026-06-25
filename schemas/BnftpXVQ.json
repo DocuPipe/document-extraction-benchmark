@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "credit agreement cover page identifying the parties, amount and date, plus the schedule of lenders and their commitment amounts.",
+  "properties": {
+    "agreementType": {
+      "type": "string",
+      "description": "the type or title of the credit agreement exactly as printed on the cover, excluding the dollar amount."
+    },
+    "aggregateCommitmentAmount": {
+      "type": "number",
+      "description": "the total facility amount printed on the cover, as a plain number without currency symbol or commas."
+    },
+    "agreementDate": {
+      "type": "string",
+      "description": "the date the agreement is dated as of, in YYYY-MM-DD format."
+    },
+    "borrower": {
+      "type": "string",
+      "description": "the name of the entity identified as the Borrower on the cover."
+    },
+    "syndicationAgent": {
+      "type": "string",
+      "description": "the name of the bank identified as the Syndication Agent on the cover."
+    },
+    "administrativeAgent": {
+      "type": "string",
+      "description": "the name of the bank identified as the Administrative Agent on the cover."
+    },
+    "lenders": {
+      "type": "array",
+      "description": "each lender row from the LENDERS AND COMMITMENTS schedule. exclude any total/summary row such as the Total line.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lenderName": {
+            "type": "string",
+            "description": "the lender name exactly as printed on the row."
+          },
+          "commitment": {
+            "type": "number",
+            "description": "the lender's commitment amount, as a plain number without currency symbol or commas."
+          }
+        }
+      }
+    }
+  }
+}

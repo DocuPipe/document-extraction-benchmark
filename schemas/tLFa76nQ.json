@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "accountHolderName": {
+      "type": "string",
+      "description": "account holder name"
+    },
+    "accountNumber": {
+      "type": "string",
+      "description": "account number (111-111111)"
+    },
+    "accountType": {
+      "type": "string",
+      "description": "account type/name (e.g. Individual - TOD)"
+    },
+    "statementPeriodStart": {
+      "type": "string",
+      "format": "date",
+      "description": "statement period start date"
+    },
+    "statementPeriodEnd": {
+      "type": "string",
+      "format": "date",
+      "description": "statement period end date"
+    },
+    "beginningAccountValue": {
+      "type": "number",
+      "description": "beginning account value for the period (account 111)"
+    },
+    "endingAccountValue": {
+      "type": "number",
+      "description": "ending account value for the period (account 111)"
+    },
+    "additions": {
+      "type": "number",
+      "description": "total additions for the period"
+    },
+    "subtractions": {
+      "type": "number",
+      "description": "total subtractions for the period (negative)"
+    },
+    "changeInInvestmentValue": {
+      "type": "number",
+      "description": "change in investment value for the period"
+    },
+    "endingMarketValueOfHoldings": {
+      "type": "number",
+      "description": "ending market value of holdings (total holdings)"
+    },
+    "holdings": {
+      "type": "array",
+      "description": "per-position holdings for account 111",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "security name as printed in the security-name column, WITHOUT the redundant parenthetical exchange ticker that is captured separately in the symbol field; single line"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "ticker symbol or CUSIP if shown"
+          },
+          "holdingType": {
+            "type": "string",
+            "enum": [
+              "Core Account",
+              "Mutual Fund",
+              "Exchange Traded Product",
+              "Stock",
+              "Bond",
+              "Other"
+            ],
+            "description": "holding category"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "quantity/units held"
+          },
+          "price": {
+            "type": "number",
+            "description": "price per unit"
+          },
+          "endingValue": {
+            "type": "number",
+            "description": "ending market value of the position"
+          },
+          "costBasis": {
+            "type": "number",
+            "description": "total cost basis"
+          },
+          "unrealizedGainLoss": {
+            "type": "number",
+            "description": "unrealized gain/loss"
+          }
+        },
+        "required": [
+          "description",
+          "endingValue"
+        ]
+      }
+    },
+    "activity": {
+      "type": "array",
+      "description": "per-transaction activity for account 111",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "settlement/transaction date"
+          },
+          "securityName": {
+            "type": "string",
+            "description": "security name (blank for pure cash transactions)"
+          },
+          "transactionDescription": {
+            "type": "string",
+            "description": "the transaction description exactly as printed in its own column (e.g. You bought, Dividend received, Wire transfer from bank); for sections without a dedicated description column use: bill payments give the payee as printed, checking gives 'Check paid', and rows that carry a separate reference/check-number column use the description cell and never the reference or check number"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "quantity if applicable"
+          },
+          "price": {
+            "type": "number",
+            "description": "price per unit if applicable"
+          },
+          "amount": {
+            "type": "number",
+            "description": "transaction total amount (signed)"
+          }
+        },
+        "required": [
+          "date",
+          "transactionDescription",
+          "amount"
+        ]
+      }
+    }
+  },
+  "required": [
+    "accountHolderName",
+    "accountNumber",
+    "beginningAccountValue",
+    "endingAccountValue",
+    "holdings",
+    "activity"
+  ]
+}

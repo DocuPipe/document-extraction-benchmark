@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "Oil and Gas Owner Revenue Check Stub",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "operatorName": {
+      "type": "string",
+      "description": "the operator / payor company name (e.g. 'Samson Exploration, LLC')"
+    },
+    "checkNumber": {
+      "type": "string",
+      "description": "the revenue check number if printed"
+    },
+    "checkDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the revenue check date in YYYY-MM-DD if printed"
+    },
+    "ownerNumber": {
+      "type": "string",
+      "description": "the owner identification number if printed"
+    },
+    "lineItems": {
+      "type": "array",
+      "description": "one entry per property+product revenue detail block",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "propertyNumber": {
+            "type": "string",
+            "description": "the property identification number (e.g. '046907')"
+          },
+          "propertyName": {
+            "type": "string",
+            "description": "the property name (e.g. 'ALEXANDER NO 3 OIL UNIT #3')"
+          },
+          "countyName": {
+            "type": "string",
+            "description": "the county where the property is located (e.g. 'Orange')"
+          },
+          "state": {
+            "type": "string",
+            "description": "the two-letter state code (e.g. 'TX')"
+          },
+          "salesMonthYear": {
+            "type": "string",
+            "description": "the sales month/year as printed (e.g. '06/2013')"
+          },
+          "productCode": {
+            "type": "string",
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "description": "the single-digit product code"
+          },
+          "interestType": {
+            "type": "string",
+            "enum": [
+              "OR",
+              "PP",
+              "RY",
+              "WI"
+            ],
+            "description": "the two-letter interest type code"
+          },
+          "decimalInterest": {
+            "type": "number",
+            "description": "the 8-decimal entitlement decimal interest (e.g. 0.00494707)"
+          },
+          "unitPrice": {
+            "type": "number",
+            "description": "the unit price (gross value divided by volume) (e.g. 102.464)"
+          },
+          "btu": {
+            "type": "number",
+            "description": "the heating value of gas in thousand BTU per cubic foot (e.g. 1.301)"
+          },
+          "ownerVolume": {
+            "type": "number",
+            "description": "this owner's share of the volume sold (e.g. 37.82)"
+          },
+          "ownerGrossValue": {
+            "type": "number",
+            "description": "this owner's share of gross value in dollars (e.g. 3874.61)"
+          },
+          "ownerTax": {
+            "type": "number",
+            "description": "this owner's share of tax in dollars (e.g. 236.20)"
+          },
+          "ownerDeducts": {
+            "type": "number",
+            "description": "this owner's share of deductions in dollars (e.g. 13.05)"
+          },
+          "ownerNetValue": {
+            "type": "number",
+            "description": "this owner's net value in dollars after tax and deductions (e.g. 3638.41)"
+          }
+        },
+        "required": [
+          "propertyNumber",
+          "propertyName",
+          "productCode",
+          "interestType",
+          "decimalInterest",
+          "ownerGrossValue",
+          "ownerTax",
+          "ownerDeducts",
+          "ownerNetValue"
+        ]
+      }
+    },
+    "ownerTotalGrossValue": {
+      "type": "number",
+      "description": "owner total gross value across all lines (e.g. 4390.26)"
+    },
+    "ownerTotalTax": {
+      "type": "number",
+      "description": "owner total tax across all lines (e.g. 282.94)"
+    },
+    "ownerTotalDeducts": {
+      "type": "number",
+      "description": "owner total deductions across all lines (e.g. 44.98)"
+    },
+    "ownerTotalNetValue": {
+      "type": "number",
+      "description": "owner total net value across all lines (e.g. 4062.34)"
+    }
+  },
+  "required": [
+    "operatorName",
+    "lineItems",
+    "ownerTotalGrossValue",
+    "ownerTotalNetValue"
+  ]
+}

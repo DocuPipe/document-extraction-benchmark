@@ -1,0 +1,126 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "interchangeControlNumber": {
+      "type": "string",
+      "description": "ISA13 interchange control number"
+    },
+    "interchangeSenderId": {
+      "type": "string",
+      "description": "ISA06 sender id"
+    },
+    "interchangeReceiverId": {
+      "type": "string",
+      "description": "ISA08 receiver id"
+    },
+    "groupControlNumber": {
+      "type": "string",
+      "description": "GS06 functional group control number"
+    },
+    "functionalIdentifierCode": {
+      "type": "string",
+      "description": "GS01 functional identifier code, e.g. PO"
+    },
+    "transactionSetControlNumber": {
+      "type": "string",
+      "description": "ST02 transaction set control number"
+    },
+    "transactionSetCode": {
+      "type": "string",
+      "description": "ST01 transaction set code, e.g. 850"
+    },
+    "purchaseOrderNumber": {
+      "type": "string",
+      "description": "BEG03 purchase order number"
+    },
+    "purchaseOrderTypeCode": {
+      "type": "string",
+      "description": "BEG02 purchase order type code, e.g. SA"
+    },
+    "purchaseOrderDate": {
+      "type": "string",
+      "format": "date",
+      "description": "BEG05 purchase order date in YYYY-MM-DD"
+    },
+    "requestedDeliveryDate": {
+      "type": "string",
+      "format": "date",
+      "description": "DTM date qualifier 001 requested date in YYYY-MM-DD"
+    },
+    "shipToName": {
+      "type": "string",
+      "description": "N1 name for ship-to (entity code ST)"
+    },
+    "shipToIdCode": {
+      "type": "string",
+      "description": "N1 identification code for ship-to"
+    },
+    "shipToStreet": {
+      "type": "string",
+      "description": "N3 ship-to street address"
+    },
+    "shipToCity": {
+      "type": "string",
+      "description": "N4 ship-to city"
+    },
+    "shipToState": {
+      "type": "string",
+      "description": "N4 ship-to state"
+    },
+    "shipToZip": {
+      "type": "string",
+      "description": "N4 ship-to postal code"
+    },
+    "lineItems": {
+      "type": "array",
+      "description": "one entry per PO1 segment",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lineNumber": {
+            "type": "integer",
+            "description": "PO1 assigned line item number"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "PO1 quantity ordered"
+          },
+          "unitOfMeasure": {
+            "type": "string",
+            "description": "PO1 unit of measure code, e.g. EA"
+          },
+          "unitPrice": {
+            "type": "number",
+            "description": "PO1 unit price"
+          },
+          "buyerItemId": {
+            "type": "string",
+            "description": "buyer item identifier following the CB qualifier"
+          },
+          "vendorItemId": {
+            "type": "string",
+            "description": "vendor item identifier following the VN qualifier"
+          }
+        },
+        "required": [
+          "lineNumber",
+          "quantity",
+          "unitOfMeasure",
+          "unitPrice"
+        ]
+      }
+    },
+    "lineItemCount": {
+      "type": "integer",
+      "description": "CTT total number of line items"
+    }
+  },
+  "required": [
+    "transactionSetCode",
+    "purchaseOrderNumber",
+    "lineItems",
+    "lineItemCount"
+  ]
+}

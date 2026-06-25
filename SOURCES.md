@@ -1,0 +1,58 @@
+# Document sources and licensing
+
+All 50 benchmark documents are included in this repository under `documents/<doc_id>.<ext>`. The table below records each document's original public source and license so provenance is fully traceable.
+
+Most documents are public-domain government/SEC filings, openly-licensed files (CC BY-SA, Apache, MIT), vendor sample documents published for distribution, or files we authored for this benchmark (released CC BY 4.0). A few are vendor sample forms that carry their own third-party copyright; they are included here for research and evaluation, and the rights-holder is named in the license column. If you are a rights-holder and want a document removed, open an issue.
+
+| # | doc_id | Document | Pages | Lang | Type | Original source | License / basis |
+|---|---|---|---|---|---|---|---|
+| 1 | `yTRFKVPx` | Smartsheet Construction Invoice | 4 | en | pdf | [link](https://www.smartsheet.com/sites/default/files/2021-11/IC-Free-Printable-Construction-Invoice-11215_PDF.pdf) | vendor free template (publicly posted) |
+| 2 | `IPm0MkgQ` | Carson Bank Sample Statement | 6 | en | pdf | [link](https://www.carsonbank.com/wp-content/uploads/2021/01/Sample-Statement.pdf) | vendor sample (dummy data) |
+| 3 | `ZXlksSpk` | Getbuildingworks BOQ Summary | 1 | en | pdf | [link](https://getbuildingworks.com/wp-content/uploads/2018/01/Bill-of-Quantities-Work-Section.pdf) | publicly posted sample |
+| 4 | `QxoQ6zgn` | UICCP Packing List Carton Dimensions | 1 | en | pdf | [link](https://uiccp.com/wp-content/uploads/2014/06/Copy-of-OCM.pdf) | vendor spec sheet (publicly posted) |
+| 5 | `PSU5pciM` | CPS Energy Electric Bill | 2 | en | pdf | [link](https://www.cpsenergy.com/content/dam/corporate/en/Documents/RAC/CustomerBills/Bill%20Sample%20-%20RA%20Rate%20-%20Non-Summer%20%20Redacted.pdf) | utility-published redacted sample |
+| 6 | `NlWTPen5` | PPL Electric Two Bill Example | 3 | en | pdf | [link](https://www.pplelectric.com/-/media/PPLElectric/At-Your-Service/Docs/General-Supplier-Reference-Information/Two-Bill-Example.pdf) | utility reference sample |
+| 7 | `phovuuuk` | University of Pittsburgh Filled Sample W-2 | 3 | en | pdf | [link](https://www.payroll.pitt.edu/sites/default/files/assets/Sample-W2.pdf) | university educational sample (no real PII) |
+| 8 | `LYeb3G3s` | Labsmart CBC Lab Report | 2 | en | pdf | [link](https://www.labsmartlis.com/pdf/pathology/cbc-report-format.pdf) | LIS-vendor sample template (de-identified) |
+| 9 | `BnftpXVQ` | SEC EDGAR FedEx Credit Agreement (excerpt) | 2 | en | pdf | [link](https://www.sec.gov/Archives/edgar/data/1048911/000156459019025065/d817656dex10207.htm) | SEC EDGAR (US gov, public domain) |
+| 10 | `SkD8Lz8o` | SEC EDGAR Precision Lease 4th Amendment (excerpt) | 3 | en | pdf | [link](https://www.sec.gov/Archives/edgar/data/1357874/000095017024036817/dtil-ex10_12.htm) | SEC EDGAR (US gov, public domain) |
+| 11 | `1ZVqiyJZ` | DC DISB Homeowners Declarations | 1 | en | pdf | [link](https://disb.dc.gov/sites/default/files/dc/sites/disb/publication/attachments/Declaration%20Page%20Sample%20Homeowners%2012.pdf) | DC gov sample (fictional names) |
+| 12 | `Oe7iRM1G` | Sage French Bulletin de Paie (payslip) | 1 | fr | pdf | [link](https://www.amplitude-informatique.fr/app/download/5813294897/Bulletin+clarifie+(Exemple).PDF) | vendor demo payslip (fictional) |
+| 13 | `XhJyv5mb` | German DEG Jahresabschluss Bilanz+GuV (excerpt) | 2 | de | pdf | [link](https://www.deginvest.de/DEG-Dokumente/Download-Center/DEG_JAB_2022_DE.pdf) | published corporate annual report |
+| 14 | `5YJaBbNg` | Portuguese Balanco e Demonstracao de Resultados (excerpt) | 2 | pt | pdf | [link](https://www.balbino-faustino.pt/uploads/base/ficheiros/Relatorio_e_Contas_2023.pdf) | published corporate annual report |
+| 15 | `62PhJTyf` | Dutch Jaarrekening Balans+Winst-en-verliesrekening (excerpt) | 3 | nl | pdf | [link](https://cournot.nl/wp-content/uploads/2018/03/voorbeeld-jaarrekening.pdf) | publicly posted sample (fictional company) |
+| 16 | `WxP8Tqgf` | Italian Busta Paga (payslip) | 1 | it | pdf | [link](https://www.unife.it) | university-hosted example payslip |
+| 17 | `DtfW60lS` | Spanish Iberdrola Factura Electricidad | 4 | es | pdf | [link](https://www.iberdrola.es) | real electricity invoice posted publicly |
+| 18 | `nESapyAA` | Taub Hebrew Tax Invoice | 1 | he | pdf | [link](https://www.taubcenter.org.il/wp-content/uploads/2020/05/104880.pdf) | vendor-generated sample invoice (posted publicly) |
+| 19 | `SBR9L7Y8` | Hebrew Payslip | 1 | he | jpeg | [link](https://commons.wikimedia.org/wiki/File:%D7%AA%D7%9C%D7%95%D7%A9_%D7%A9%D7%9B%D7%A8.jpg) | Wikimedia Commons, CC BY-SA 4.0 |
+| 20 | `J6buHXQ4` | Majdal Shams Municipal Financials | 13 | he | pdf | [link](https://majdal.muni.gov.il/media/xnahdrcu/kasbi2023.pdf) | municipal government publication |
+| 21 | `qoSTXgNE` | Zionist Strategy NGO Financials | 4 | he | pdf | [link](https://www.guidestar.org.il/organization/580429207/finances) | GuideStar Israel (gov NGO registry), public filing |
+| 22 | `qQUPWQNA` | Ramat Gan Arnona Rates 2025 | 5 | he | pdf | [link](https://cms-media.ramat-gan.muni.il/media/a33jhfld/) | municipal government publication |
+| 23 | `jlKc8eVi` | Hitachi Japanese Invoice | 1 | ja | pdf | [link](https://www.hitachi.co.jp/Prod/comp/soft1/pde/info/concept/pdf/sample1_b.pdf) | vendor product sample template |
+| 24 | `45xidifn` | Hitachi Japanese Statement | 1 | ja | pdf | [link](https://www.hitachi.co.jp/Prod/comp/soft1/pde/info/concept/pdf/sample3_b.pdf) | vendor product sample template |
+| 25 | `M66HZlWT` | Chang Gung Chinese Medical Receipt | 1 | zh | jpeg | [link](https://commons.wikimedia.org/wiki/File:Chang_Gung_Memorial_Hospital_medical_expenditure_receipt_20160224_face.jpg) | Wikimedia Commons, CC BY-SA 4.0 |
+| 26 | `Eet2wW3x` | FRESA Arabic Tax Invoice | 1 | ar | pdf | [link](https://fresatechnologies.com/wp-content/uploads/report-formats/invoice-report-format-8-standard-invoice-arabic.pdf) | vendor sample report format (publicly posted) |
+| 27 | `vBIz5dut` | Five Guys Receipt Photo | 1 | en | jpeg | [link](https://expressexpense.com/blog/free-receipt-images-ocr-machine-learning-dataset/) | ExpressExpense SRD dataset, MIT License |
+| 28 | `5ukZftw0` | Financial Sample Spreadsheet (trimmed 30 rows) | 1 | en | xlsx | [link](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download) | Microsoft sample-data terms (copy/use permitted) |
+| 29 | `PYhFptk3` | EDI 850 Purchase Order | 1 | en | txt | [link](https://iwayinfocenter.informationbuilders.com/TLs/TL_soa_ebiz_edix12/source/sample_docs48.htm) | vendor docs sample X12 (synthetic) |
+| 30 | `C7fe2lau` | Peppol UBL E-Invoice | 1 | en | xml | [link](https://github.com/OpenPEPPOL/peppol-bis-invoice-3/blob/master/rules/examples/base-example.xml) | OpenPEPPOL repo, Apache-2.0 |
+| 31 | `iTruRDrG` | Vince Sea Waybill | 2 | en | pdf | [link](http://vincesupplierportal.vince.com/_uploads/ship/shipDocs/Seaway%20Bill%20Example.pdf) | vendor supplier-portal example |
+| 32 | `UnG6cLfP` | Samson Oil & Gas Check Stub | 2 | en | pdf | [link](https://www.samsonco.com/images/Owner-RelationsPage-DetailedExplanationofCheckStub.pdf) | vendor sample (publicly posted) |
+| 33 | `ENoM9faK` | NASA Mechanical Drawing (sliced from 128p) | 1 | en | pdf | [link](https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/NASA%20GSFC-X-673-64-1F.pdf) | NASA (US gov work, public domain, 17 USC 105) |
+| 34 | `97uZroyv` | Hyperfine Schedule Sheet (sliced from 16p) | 1 | en | pdf | [link](https://hyperfinearchitecture.com/wp-content/uploads/2018/06/HFC_01_Plan-Set.pdf) | (c) Hyperfine Architecture (publicly downloadable) |
+| 35 | `NNaGgwE5` | NRCS Pedon Handwritten Form | 2 | en | pdf | [link](https://www.uvm.edu/femc/attachments/project/161/Field_Book_for_Describing_and_Sampling_Soils.pdf) | USDA-NRCS (US gov, public domain); UVM mirror |
+| 36 | `OayFbGlG` | Optum Discharge Summary | 2 | en | pdf | [link](https://www.optumhealthsandiego.com/content/dam/san-diego/documents/ffsproviders/review-inpatient/Inpatient%20Note%20Example.pdf) | (c) Optum, sample note |
+| 37 | `wVafMvAC` | German 1976 Wage Statement | 1 | de | jpeg | [link](https://commons.wikimedia.org/wiki/File:Entgeltabrechnung_in_einer_Versicherungsgesellschaft_1976.JPG) | CC BY 4.0 + GFDL 1.2+ (uploader Wolf1949, self-created); privately self-uploaded 1976 payslip, no printed personal name |
+| 38 | `GW7i2xbM` | FL Homeowners Declarations | 1 | en | pdf | [link](https://myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/sample-declarations-page.pdf) | Florida state gov consumer-guide sample |
+| 39 | `KpewWz3R` | FHA 1004 Appraisal (sliced from 21p) | 7 | en | pdf | [link](http://www.piekos.com/xSites/Appraisers/piekos/Content/UploadedFiles/FHA_1004_DEMO.pdf) | (c) Piekos / a la mode form (publicly hosted) |
+| 40 | `tLFa76nQ` | Fidelity Brokerage Statement (sliced from 28p) | 18 | en | pdf | [link](https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/sample-new-fidelity-acnt-stmt.pdf) | (c) Fidelity, published sample |
+| 41 | `4kVtTRoL` | Moneck Merchant Statement | 5 | en | pdf | [link](https://moneck.com/uploads/samples/Merchant-Statement-Example-Format.pdf) | (c) Moneck, hosted sample |
+| 42 | `FiFgt4a6` | Ethiopian Air Waybill | 1 | en | pdf | [link](https://www.againstmalaria.com/images/00/00/775.pdf) | public shipment AWB posting |
+| 43 | `bjBNmyNw` | Gordmans PO Line Items | 1 | en | pdf | [link](https://mimage.opentext.com/alt_content/binary/businessnetwork/gordmans/gordmans-guide-12-20-19a.pdf) | publicly hosted vendor routing manual |
+| 44 | `WnxX1Buq` | PG&E Solar NEM Statement | 4 | en | pdf | [link](https://www.pge.com/assets/pge/docs/account/billing-and-assistance/nem-monthly-transition-bill-base-services-charge.pdf) | utility published sample (fictitious data) |
+| 45 | `zKibU88u` | Orders Export XML | 1 | en | xml | (generated by benchmark authors) | authored for this benchmark, CC BY 4.0 |
+| 46 | `pw8elPW9` | Hebrew Financial Statement (DOCX) | 1 | he | docx | (generated by benchmark authors) | authored for this benchmark, CC BY 4.0 |
+| 47 | `7ZhgzAzp` | Ethiopian Air Waybill (rotated 90, TIFF) | 1 | en | tiff | [link](https://www.againstmalaria.com/images/00/00/775.pdf) | derived (90deg rotation) from doc #42 |
+| 48 | `B0nA2c30` | Five Guys Receipt (rotated 180, PNG) | 1 | en | png | [link](https://expressexpense.com/blog/free-receipt-images-ocr-machine-learning-dataset/) | derived (180deg rotation) from doc #27 (MIT) |
+| 49 | `eKzY7gEA` | Clinical Discharge Summary (HTML) | 1 | en | html | (generated by benchmark authors) | authored for this benchmark, CC BY 4.0 |
+| 50 | `ZN6HbuKp` | Bank Transaction Register (CSV) | 1 | en | csv | (generated by benchmark authors) | authored for this benchmark, CC BY 4.0 |

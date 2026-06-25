@@ -1,0 +1,30 @@
+{
+  "score": 1.0,
+  "cost": 0.25,
+  "time_sec": 20.417,
+  "num_pages": 4,
+  "data": {
+    "iva": 14.05,
+    "cups": "ES 0021 0000 0474 4848 NZ",
+    "charges": [
+      {
+        "amount": 66.02,
+        "description": "ENERGÍA"
+      },
+      {
+        "amount": 0.88,
+        "description": "SERVICIOS Y OTROS CONCEPTOS"
+      },
+      {
+        "amount": 14.05,
+        "description": "IVA 21% s/66,9 €"
+      }
+    ],
+    "consumoKwh": 350,
+    "totalAPagar": 80.95,
+    "baseImponible": 66.9,
+    "numeroFactura": "21180613010076890",
+    "periodoFacturacionEnd": "2018-06-10",
+    "periodoFacturacionStart": "2018-05-08"
+  }
+}

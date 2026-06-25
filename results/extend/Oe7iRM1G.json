@@ -1,0 +1,211 @@
+{
+  "score": 0.8418367346938775,
+  "cost": 0.0625,
+  "time_sec": 21.684,
+  "num_pages": 1,
+  "data": {
+    "siret": "995002433 00010",
+    "earnings": [
+      {
+        "base": null,
+        "rate": null,
+        "amount": 3000,
+        "designation": "Salaire mensuel"
+      },
+      {
+        "base": 3000,
+        "rate": 15,
+        "amount": 450,
+        "designation": "Prime d'ancienneté"
+      }
+    ],
+    "netAPayer": 2649.43,
+    "totalBrut": 3450,
+    "paymentDate": "2017-10-31",
+    "employeeName": "Jecrute Aline",
+    "employerName": "Jeu d'Essai",
+    "netImposable": 2770.28,
+    "payPeriodEnd": "2017-10-31",
+    "contributions": [
+      {
+        "base": 3450,
+        "designation": "Sécurité Sociale - Maladie Maternité Invalidité Décès",
+        "employeeRate": 0.75,
+        "employerRate": 12.89,
+        "employeeAmount": 25.88,
+        "employerAmount": 444.71
+      },
+      {
+        "base": 3269,
+        "designation": "Complémentaire Incapacité Invalidité Décès",
+        "employeeRate": null,
+        "employerRate": 1.5,
+        "employeeAmount": 0,
+        "employerAmount": 49.04
+      },
+      {
+        "base": 3269,
+        "designation": "Complémentaire Santé",
+        "employeeRate": 0.76,
+        "employerRate": 2.63,
+        "employeeAmount": 24.84,
+        "employerAmount": 85.98
+      },
+      {
+        "base": 3450,
+        "designation": "ACCIDENTS DE TRAVAIL-MALADIES PROFESSIONNELLES",
+        "employeeRate": null,
+        "employerRate": 2.2,
+        "employeeAmount": 0,
+        "employerAmount": 75.9
+      },
+      {
+        "base": 3269,
+        "designation": "Sécurité Sociale plafonnée",
+        "employeeRate": 6.9,
+        "employerRate": 8.55,
+        "employeeAmount": 225.56,
+        "employerAmount": 279.5
+      },
+      {
+        "base": 3450,
+        "designation": "Sécurité Sociale déplafonnée",
+        "employeeRate": 0.4,
+        "employerRate": 1.9,
+        "employeeAmount": 13.8,
+        "employerAmount": 65.55
+      },
+      {
+        "base": 3269,
+        "designation": "Complémentaire Tranche A",
+        "employeeRate": 3.9,
+        "employerRate": 5.85,
+        "employeeAmount": 127.49,
+        "employerAmount": 191.24
+      },
+      {
+        "base": null,
+        "designation": "Complémentaire Garantie Minimale de Points",
+        "employeeRate": null,
+        "employerRate": null,
+        "employeeAmount": 0,
+        "employerAmount": 0
+      },
+      {
+        "base": 181,
+        "designation": "Complémentaire Tranche B",
+        "employeeRate": 8.7,
+        "employerRate": 14.05,
+        "employeeAmount": 15.75,
+        "employerAmount": 25.43
+      },
+      {
+        "base": null,
+        "designation": "Complémentaire Tranche C",
+        "employeeRate": null,
+        "employerRate": null,
+        "employeeAmount": 0,
+        "employerAmount": 0
+      },
+      {
+        "base": 3450,
+        "designation": "Complémentaire CET",
+        "employeeRate": 0.13,
+        "employerRate": 0.22,
+        "employeeAmount": 4.49,
+        "employerAmount": 7.59
+      },
+      {
+        "base": 3450,
+        "designation": "FAMILLE-SECURITE SOCIALE",
+        "employeeRate": null,
+        "employerRate": 3.45,
+        "employeeAmount": 0,
+        "employerAmount": 119.03
+      },
+      {
+        "base": 3450,
+        "designation": "Chômage",
+        "employeeRate": 2.4,
+        "employerRate": 4.2,
+        "employeeAmount": 82.8,
+        "employerAmount": 144.91
+      },
+      {
+        "base": 3450,
+        "designation": "APEC",
+        "employeeRate": 0.024,
+        "employerRate": 0.036,
+        "employeeAmount": 0.82,
+        "employerAmount": 1.25
+      },
+      {
+        "base": 3450,
+        "designation": "AUTRES CONTRIBUTIONS DUES PAR L'EMPLOYEUR",
+        "employeeRate": null,
+        "employerRate": 10.056,
+        "employeeAmount": 0,
+        "employerAmount": 346.95
+      },
+      {
+        "base": 3477.96,
+        "designation": "CSG non imposable à l'impôt sur le revenu",
+        "employeeRate": 5.1,
+        "employerRate": null,
+        "employeeAmount": 177.37,
+        "employerAmount": 0
+      },
+      {
+        "base": 3477.96,
+        "designation": "CSG/CRDS imposable à l'impôt sur le revenu",
+        "employeeRate": 2.9,
+        "employerRate": null,
+        "employeeAmount": 100.86,
+        "employerAmount": 0
+      },
+      {
+        "base": null,
+        "designation": "ALLEGEMENT DES COTISATIONS",
+        "employeeRate": null,
+        "employerRate": null,
+        "employeeAmount": 0,
+        "employerAmount": 0
+      },
+      {
+        "base": 181,
+        "designation": "Complémentaire Santé",
+        "employeeRate": 0.5,
+        "employerRate": 1.3,
+        "employeeAmount": 0.91,
+        "employerAmount": 2.35
+      },
+      {
+        "base": 641.33,
+        "designation": "AUTRES CONTRIBUTIONS DUES PAR L'EMPLOYEUR",
+        "employeeRate": null,
+        "employerRate": 4.25,
+        "employeeAmount": 0,
+        "employerAmount": 27.26
+      },
+      {
+        "base": 2165.25,
+        "designation": "AUTRES CONTRIBUTIONS DUES PAR L'EMPLOYEUR",
+        "employeeRate": null,
+        "employerRate": 9.35,
+        "employeeAmount": 0,
+        "employerAmount": 202.45
+      },
+      {
+        "base": 88.33,
+        "designation": "AUTRES CONTRIBUTIONS DUES PAR L'EMPLOYEUR",
+        "employeeRate": null,
+        "employerRate": 8,
+        "employeeAmount": 0,
+        "employerAmount": 7.07
+      }
+    ],
+    "payPeriodStart": "2017-10-01",
+    "totalEmployeeContributions": 800.57,
+    "totalEmployerContributions": 2076.21
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "A consumer bank account statement showing the account summary and an itemized list of transactions.",
+  "properties": {
+    "accountHolderName": {
+      "type": "string",
+      "description": "Full name of the account holder as printed in the statement address block."
+    },
+    "accountNumber": {
+      "type": "string",
+      "description": "The checking account number shown in the statement header, kept as printed including any masking."
+    },
+    "statementPeriodDays": {
+      "type": "number",
+      "description": "Number of days in the statement period from the account activity summary."
+    },
+    "previousBalance": {
+      "type": "number",
+      "description": "The previous balance amount from the account activity summary box, as a number without currency symbols or separators."
+    },
+    "totalCredits": {
+      "type": "number",
+      "description": "Total deposits and credits amount from the account activity summary box."
+    },
+    "totalDebits": {
+      "type": "number",
+      "description": "Total checks and withdrawals amount from the account activity summary box."
+    },
+    "endingBalance": {
+      "type": "number",
+      "description": "The ending balance amount from the account activity summary box."
+    },
+    "transactions": {
+      "type": "array",
+      "description": "each row from the account activity / transaction register that carries a running balance, in order, across all pages. do not include rows from the separate Checks summary listing (check number and amount only, with no running balance).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Transaction date as printed in the row, in YYYY-MM-DD format."
+          },
+          "description": {
+            "type": "string",
+            "description": "The short printed payee or memo text identifying the transaction row."
+          },
+          "debit": {
+            "type": "number",
+            "description": "The debit amount for this row as a number, or null when the row has no debit."
+          },
+          "credit": {
+            "type": "number",
+            "description": "The credit amount for this row as a number, or null when the row has no credit."
+          },
+          "balance": {
+            "type": "number",
+            "description": "The running account balance printed at the end of this row as a number."
+          }
+        }
+      }
+    }
+  }
+}

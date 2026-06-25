@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "amendmentNumber": {
+      "type": "string",
+      "description": "ordinal of this lease amendment as written, e.g. 'Fifth' or 'Second'"
+    },
+    "amendmentDate": {
+      "type": "string",
+      "description": "date this amendment is made as of, in YYYY-MM-DD format, e.g. '2018-03-15'"
+    },
+    "landlordName": {
+      "type": "string",
+      "description": "full legal name of the landlord party, e.g. 'Maple Holdings, LLC'"
+    },
+    "tenantName": {
+      "type": "string",
+      "description": "full legal name of the tenant party, e.g. 'Acme Robotics, Inc.'"
+    },
+    "rrExpansionSquareFeet": {
+      "type": "number",
+      "description": "rentable square feet of the RR (Receiving Room) Expansion Premises, e.g. 9000"
+    },
+    "prSecondFloorExpansionSquareFeet": {
+      "type": "number",
+      "description": "rentable square feet of the PR Second Floor Expansion Premises, e.g. 5000"
+    },
+    "baseRentSchedule": {
+      "type": "array",
+      "description": "one flat entry per period bucket per expansion premises across all base rent tables",
+      "items": {
+        "type": "object",
+        "properties": {
+          "premisesName": {
+            "type": "string",
+            "description": "name of the expansion premises this rent row applies to, e.g. 'RR Expansion Premises'"
+          },
+          "periodMonths": {
+            "type": "string",
+            "description": "the months-following-expansion-date bucket exactly as labeled, e.g. '1 - 12' or '85 - Expiration Date'"
+          },
+          "annualRatePerSquareFoot": {
+            "type": "number",
+            "description": "annual base rent per rentable square foot for this bucket, e.g. 22.5"
+          },
+          "monthlyRent": {
+            "type": "number",
+            "description": "monthly base rent dollar amount for this bucket, e.g. 16875.0"
+          }
+        },
+        "required": [
+          "premisesName",
+          "periodMonths",
+          "annualRatePerSquareFoot",
+          "monthlyRent"
+        ]
+      }
+    }
+  },
+  "required": [
+    "amendmentNumber",
+    "amendmentDate",
+    "landlordName",
+    "tenantName",
+    "rrExpansionSquareFeet",
+    "prSecondFloorExpansionSquareFeet",
+    "baseRentSchedule"
+  ]
+}

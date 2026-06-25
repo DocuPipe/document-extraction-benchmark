@@ -1,0 +1,65 @@
+{
+  "score": 1.0,
+  "cost": 0.0625,
+  "time_sec": 11.023,
+  "num_pages": 1,
+  "data": {
+    "items": [
+      {
+        "netWeightKg": 12.8,
+        "cartonSizeM3": 0.036,
+        "grossWeightKg": 13.8,
+        "cartonsPer20ft": 750,
+        "cartonsPer40ft": 1500,
+        "productPacking": "UIC 16 X 800gm",
+        "cartonDimensionCm": "41.50 X 26.00 X 33.40"
+      },
+      {
+        "netWeightKg": 15,
+        "cartonSizeM3": 0.0426,
+        "grossWeightKg": 16,
+        "cartonsPer20ft": 680,
+        "cartonsPer40ft": 1360,
+        "productPacking": "UIC 6 X 2.5kg",
+        "cartonDimensionCm": "53.00 X 36.50 X 22.00"
+      },
+      {
+        "netWeightKg": 16,
+        "cartonSizeM3": 0.0444,
+        "grossWeightKg": 17,
+        "cartonsPer20ft": 660,
+        "cartonsPer40ft": 1320,
+        "productPacking": "UIC 4 X 4kg",
+        "cartonDimensionCm": "43.60 X 29.20 X 34.90"
+      },
+      {
+        "netWeightKg": 12.8,
+        "cartonSizeM3": 0.0372,
+        "grossWeightKg": 13.8,
+        "cartonsPer20ft": 750,
+        "cartonsPer40ft": 1500,
+        "productPacking": "Peony 16 X 800gm",
+        "cartonDimensionCm": "41.50 X 26.00 X 34.50"
+      },
+      {
+        "netWeightKg": 15,
+        "cartonSizeM3": 0.0469,
+        "grossWeightKg": 16,
+        "cartonsPer20ft": 680,
+        "cartonsPer40ft": 1360,
+        "productPacking": "Peony 6 X 2.5kg",
+        "cartonDimensionCm": "53.00 X 38.50 X 23.00"
+      },
+      {
+        "netWeightKg": 16,
+        "cartonSizeM3": 0.0444,
+        "grossWeightKg": 17,
+        "cartonsPer20ft": 660,
+        "cartonsPer40ft": 1320,
+        "productPacking": "Peony 4 X 4kg",
+        "cartonDimensionCm": "43.60 X 29.20 X 34.90"
+      }
+    ],
+    "productCategory": "POWDER DETERGENT"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "A German HGB annual-financial-statement excerpt containing a balance sheet (HGB-Bilanz) and an income statement (Gewinn- und Verlustrechnung). Extract only the current reporting period (the 31.12.2022 / year 2022 column); ignore the prior-year (Vorjahr) comparative column entirely.",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "Name of the company the financial statement belongs to, as printed in the document."
+    },
+    "balanceSheetDate": {
+      "type": "string",
+      "description": "The reporting date of the current-period balance sheet in YYYY-MM-DD format (the HGB-Bilanz reporting date, not the prior-year date)."
+    },
+    "totalAssets": {
+      "type": "number",
+      "description": "The printed Summe der Aktiva total for the current period as a number, without currency symbols or thousands separators."
+    },
+    "totalEquityAndLiabilities": {
+      "type": "number",
+      "description": "The printed Summe der Passiva total for the current period as a number, without currency symbols or thousands separators."
+    },
+    "netResult": {
+      "type": "number",
+      "description": "The current-period net result (Jahresüberschuss or Jahresfehlbetrag) from the income statement as a number; negative for a loss."
+    },
+    "balanceSheet": {
+      "type": "array",
+      "description": "each individual line item (current-period column only) with a printed monetary amount. exclude subtotal rows, total/grand-total rows, and 'of which'/'davon' memo sub-lines. use the printed label exactly, without adding '(Summe)' or '(subtotal)'.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineItem": {
+            "type": "string",
+            "description": "the line item's printed label exactly as shown, INCLUDING any leading enumerator such as '1.', '2.', 'a)', 'b)', 'I.' as printed; do not add qualifiers like '(Summe)'."
+          },
+          "amount": {
+            "type": "number",
+            "description": "The current-period monetary amount printed for this balance-sheet line, as a number in EUR without currency symbols or thousands separators."
+          }
+        }
+      }
+    },
+    "incomeStatement": {
+      "type": "array",
+      "description": "each individual line item (current-period column only) with a printed monetary amount. exclude subtotal rows, total/grand-total rows, and 'of which'/'davon' memo sub-lines. use the printed label exactly, without adding '(Summe)' or '(subtotal)'.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineItem": {
+            "type": "string",
+            "description": "the line item's printed label exactly as shown, INCLUDING any leading enumerator such as '1.', '2.', 'a)', 'b)', 'I.' as printed; do not add qualifiers like '(Summe)'."
+          },
+          "amount": {
+            "type": "number",
+            "description": "The current-period monetary amount printed for this income-statement line, as a number without currency symbols or thousands separators (figures may be in EUR or TEUR; extract the printed figure as-is)."
+          }
+        }
+      }
+    }
+  }
+}

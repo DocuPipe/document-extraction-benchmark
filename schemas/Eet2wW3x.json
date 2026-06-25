@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "customer": {
+      "type": "string",
+      "description": "customer name (Customer)"
+    },
+    "customerAddress": {
+      "type": "string",
+      "description": "customer address lines"
+    },
+    "invoiceNumber": {
+      "type": "string",
+      "description": "invoice number (Invoice No.)"
+    },
+    "invoiceDate": {
+      "type": "string",
+      "description": "invoice date (Invoice Date) as printed"
+    },
+    "paymentDueDate": {
+      "type": "string",
+      "description": "payment due date (Payment Due Date) as printed"
+    },
+    "shipper": {
+      "type": "string",
+      "description": "shipper name (Shipper)"
+    },
+    "consignee": {
+      "type": "string",
+      "description": "consignee name (Consignee)"
+    },
+    "placeOfOrigin": {
+      "type": "string",
+      "description": "place of origin (Place of Origin)"
+    },
+    "finalDestination": {
+      "type": "string",
+      "description": "final destination (Final destination)"
+    },
+    "vesselFlight": {
+      "type": "string",
+      "description": "vessel / flight (Vessel / Flight)"
+    },
+    "jobNumber": {
+      "type": "string",
+      "description": "job number (Job Number)"
+    },
+    "masterNumber": {
+      "type": "string",
+      "description": "master bill number (Master Number)"
+    },
+    "houseNumber": {
+      "type": "string",
+      "description": "house bill number (House No.)"
+    },
+    "numberOfPacks": {
+      "type": "number",
+      "description": "number of packs (Number of Packs)"
+    },
+    "weightKgs": {
+      "type": "number",
+      "description": "weight in kilograms (Weight in Kgs)"
+    },
+    "volumeCbm": {
+      "type": "number",
+      "description": "volume in cubic meters (Volume in CBM)"
+    },
+    "currency": {
+      "type": "string",
+      "description": "invoice currency from the Total line, e.g. AED"
+    },
+    "amountInWords": {
+      "type": "string",
+      "description": "total amount written in words, as printed"
+    },
+    "charges": {
+      "type": "array",
+      "description": "one entry per charge row in the charge table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "charge description (Charge Description), e.g. DELIVERY ORDER CHARGES"
+          },
+          "currency": {
+            "type": "string",
+            "description": "currency code (Curr) for the row, e.g. AED"
+          },
+          "ratePerUnit": {
+            "type": "number",
+            "description": "rate per unit (Rate Per Unit)"
+          },
+          "unit": {
+            "type": "number",
+            "description": "number of units (Unit)"
+          },
+          "currencyAmount": {
+            "type": "number",
+            "description": "currency amount (Curr. Amount)"
+          },
+          "roe": {
+            "type": "number",
+            "description": "rate of exchange (ROE)"
+          },
+          "totalPriceExclVat": {
+            "type": "number",
+            "description": "total price excluding VAT (Total Price excl. VAT)"
+          },
+          "vatPercent": {
+            "type": "number",
+            "description": "VAT percentage (VAT%), numeric without percent sign"
+          },
+          "vatAmount": {
+            "type": "number",
+            "description": "VAT amount (VAT Amount)"
+          },
+          "total": {
+            "type": "number",
+            "description": "row total including VAT (Total)"
+          }
+        },
+        "required": [
+          "description",
+          "totalPriceExclVat",
+          "vatPercent",
+          "vatAmount",
+          "total"
+        ]
+      }
+    },
+    "totalExclVat": {
+      "type": "number",
+      "description": "sum of totals excluding VAT from the Total line"
+    },
+    "totalVat": {
+      "type": "number",
+      "description": "total VAT amount from the Total line"
+    },
+    "grandTotal": {
+      "type": "number",
+      "description": "grand total including VAT from the Total line"
+    }
+  },
+  "required": [
+    "customer",
+    "invoiceNumber",
+    "invoiceDate",
+    "charges",
+    "grandTotal"
+  ]
+}

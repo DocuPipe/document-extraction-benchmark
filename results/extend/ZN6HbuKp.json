@@ -1,0 +1,144 @@
+{
+  "score": 0.8205128205128205,
+  "cost": 0.037500000000000006,
+  "time_sec": 7.052,
+  "num_pages": 1,
+  "data": {
+    "largeDebits": [
+      {
+        "merchant": "SPOTIFY USA",
+        "postedOn": "2025-01-04",
+        "valueDate": null,
+        "spendCategory": "Subscription",
+        "debitAmountUsd": 141.58
+      },
+      {
+        "merchant": "SHELL OIL 57",
+        "postedOn": "2025-01-05",
+        "valueDate": null,
+        "spendCategory": "Transport",
+        "debitAmountUsd": 120.03
+      },
+      {
+        "merchant": "OLIVE GARDEN",
+        "postedOn": "2025-01-07",
+        "valueDate": null,
+        "spendCategory": "Dining",
+        "debitAmountUsd": 133.56
+      },
+      {
+        "merchant": "BEST BUY 391",
+        "postedOn": "2025-01-09",
+        "valueDate": null,
+        "spendCategory": "Retail",
+        "debitAmountUsd": 193.02
+      },
+      {
+        "merchant": "WHOLE FOODS MKT",
+        "postedOn": "2025-01-12",
+        "valueDate": null,
+        "spendCategory": "Groceries",
+        "debitAmountUsd": 205.34
+      },
+      {
+        "merchant": "ONLINE XFER TO SAVINGS",
+        "postedOn": "2025-01-14",
+        "valueDate": null,
+        "spendCategory": "Transfer",
+        "debitAmountUsd": 252.63
+      },
+      {
+        "merchant": "PG&E WEB PAYMENT",
+        "postedOn": "2025-01-24",
+        "valueDate": null,
+        "spendCategory": "Utilities",
+        "debitAmountUsd": 209.35
+      },
+      {
+        "merchant": "ATM FEE",
+        "postedOn": "2025-01-16",
+        "valueDate": null,
+        "spendCategory": "Fees",
+        "debitAmountUsd": 25
+      },
+      {
+        "merchant": "WHOLE FOODS MKT",
+        "postedOn": "2025-02-18",
+        "valueDate": null,
+        "spendCategory": "Groceries",
+        "debitAmountUsd": 210.85
+      },
+      {
+        "merchant": "TARGET 00021",
+        "postedOn": "2025-02-20",
+        "valueDate": null,
+        "spendCategory": "Retail",
+        "debitAmountUsd": 196.75
+      },
+      {
+        "merchant": "TRADER JOE'S",
+        "postedOn": "2025-02-21",
+        "valueDate": null,
+        "spendCategory": "Groceries",
+        "debitAmountUsd": 131.63
+      },
+      {
+        "merchant": "CHIPOTLE 2231",
+        "postedOn": "2025-02-22",
+        "valueDate": null,
+        "spendCategory": "Dining",
+        "debitAmountUsd": 125.42
+      },
+      {
+        "merchant": "BEST BUY 391",
+        "postedOn": "2025-02-26",
+        "valueDate": null,
+        "spendCategory": "Retail",
+        "debitAmountUsd": 171.67
+      },
+      {
+        "merchant": "BEST BUY 391",
+        "postedOn": "2025-02-28",
+        "valueDate": null,
+        "spendCategory": "Retail",
+        "debitAmountUsd": 212.84
+      },
+      {
+        "merchant": "ZELLE TO J SMITH",
+        "postedOn": "2025-03-07",
+        "valueDate": null,
+        "spendCategory": "Transfer",
+        "debitAmountUsd": 233.59
+      },
+      {
+        "merchant": "NETFLIX.COM",
+        "postedOn": "2025-03-10",
+        "valueDate": null,
+        "spendCategory": "Subscription",
+        "debitAmountUsd": 182.64
+      },
+      {
+        "merchant": "ATM FEE",
+        "postedOn": "2025-01-21",
+        "valueDate": null,
+        "spendCategory": "Fees",
+        "debitAmountUsd": 25
+      },
+      {
+        "merchant": "KAISER PERMANENTE",
+        "postedOn": "2025-02-23",
+        "valueDate": null,
+        "spendCategory": "Healthcare",
+        "debitAmountUsd": 62.42
+      }
+    ],
+    "accountSummary": {
+      "totalDebits": 2957.97,
+      "totalCredits": 8338.16,
+      "closingBalance": 9881.29,
+      "openingBalance": 5000,
+      "feeTransactionCount": 5
+    },
+    "highestRunningBalanceDescription": "ACME CORP DIRECT DEP"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "portuguese individual balance sheet (balanco individual) and income statement (demonstracao dos resultados por naturezas). extract only the current period column (31/12/2023, periodo 2023); never use the 2022 column.",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "name of the company the financial statements belong to, as printed on the report, or null if not shown on these pages."
+    },
+    "balanceSheetDate": {
+      "type": "string",
+      "description": "reporting date of the current period balance sheet in YYYY-MM-DD format (the 31/12/2023 column date)."
+    },
+    "balanceSheet": {
+      "type": "array",
+      "description": "each individual line item (current-period column only) with a printed monetary amount. exclude subtotal rows, total/grand-total rows, and 'of which'/'davon' memo sub-lines. use the printed label exactly, without adding '(Summe)' or '(subtotal)'.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineItem": {
+            "type": "string",
+            "description": "the line item's printed label exactly as shown, without any added qualifier such as '(Summe)' or '(subtotal)'."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the current period (31/12/2023) amount in euros as a number, no currency symbol or thousands separators; negatives kept negative."
+          }
+        }
+      }
+    },
+    "incomeStatement": {
+      "type": "array",
+      "description": "each individual line item (current-period column only) with a printed monetary amount. exclude subtotal rows, total/grand-total rows, and 'of which'/'davon' memo sub-lines. use the printed label exactly, without adding '(Summe)' or '(subtotal)'.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineItem": {
+            "type": "string",
+            "description": "the line item's printed label exactly as shown, without any added qualifier such as '(Summe)' or '(subtotal)'."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the current period (2023) amount in euros as a number, no currency symbol or thousands separators; negatives kept negative."
+          }
+        }
+      }
+    },
+    "totalAtivo": {
+      "type": "number",
+      "description": "the Total do ativo amount for the current period (31/12/2023), numeric only in euros."
+    },
+    "totalCapitalProprioEPassivo": {
+      "type": "number",
+      "description": "the Total do capital proprio e do passivo amount for the current period (31/12/2023), numeric only in euros; reconciles with totalAtivo."
+    },
+    "resultadoLiquido": {
+      "type": "number",
+      "description": "the Resultado liquido do periodo for the current period (2023) from the income statement, numeric only in euros."
+    }
+  }
+}

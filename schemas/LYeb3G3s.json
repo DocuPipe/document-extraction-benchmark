@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "complete blood count (CBC) lab report with per-analyte results and patient metadata",
+  "properties": {
+    "patient": {
+      "type": "object",
+      "description": "patient demographics as printed.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "the patient name without any honorific or title (exclude Mr., Mrs., Ms., Dr.)."
+        },
+        "age": {
+          "type": "string",
+          "description": "the patient age as printed (may include a unit such as Y)."
+        },
+        "sex": {
+          "type": "string",
+          "description": "the patient sex as printed."
+        }
+      }
+    },
+    "registrationNumber": {
+      "type": "string",
+      "description": "the registration number printed as 'Regd. No.' on the report."
+    },
+    "results": {
+      "type": "array",
+      "description": "each CBC analyte result row with its value, units, reference range, and abnormal flag.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "testName": {
+            "type": "string",
+            "description": "the analyte/test name as printed."
+          },
+          "value": {
+            "type": "number",
+            "description": "the numeric result value."
+          },
+          "units": {
+            "type": "string",
+            "description": "the result units as printed."
+          },
+          "referenceRange": {
+            "type": "string",
+            "description": "the printed reference/normal range."
+          },
+          "flag": {
+            "type": "string",
+            "description": "the abnormal flag if printed (e.g. H for high, L for low), else null."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "subjectPropertyAddress": {
+      "type": "string",
+      "description": "subject property street address on one line"
+    },
+    "subjectCity": {
+      "type": "string",
+      "description": "subject city"
+    },
+    "subjectState": {
+      "type": "string",
+      "description": "subject state code"
+    },
+    "subjectZip": {
+      "type": "string",
+      "description": "subject zip code (may be masked, e.g. 604XX)"
+    },
+    "borrowerName": {
+      "type": "string",
+      "description": "borrower name"
+    },
+    "county": {
+      "type": "string",
+      "description": "county"
+    },
+    "lenderClientName": {
+      "type": "string",
+      "description": "lender/client name"
+    },
+    "assignmentType": {
+      "type": "string",
+      "enum": [
+        "Purchase Transaction",
+        "Refinance Transaction",
+        "Other"
+      ],
+      "description": "assignment type checkbox"
+    },
+    "propertyRightsAppraised": {
+      "type": "string",
+      "enum": [
+        "Fee Simple",
+        "Leasehold",
+        "Other"
+      ],
+      "description": "property rights appraised"
+    },
+    "contractPrice": {
+      "type": "number",
+      "description": "contract price for the subject purchase"
+    },
+    "siteAreaSqft": {
+      "type": "number",
+      "description": "subject site/lot area in square feet"
+    },
+    "yearBuilt": {
+      "type": "integer",
+      "description": "subject year built"
+    },
+    "grossLivingAreaSqft": {
+      "type": "number",
+      "description": "subject gross living area above grade in square feet"
+    },
+    "bedrooms": {
+      "type": "integer",
+      "description": "subject number of bedrooms above grade"
+    },
+    "totalRooms": {
+      "type": "integer",
+      "description": "subject total rooms above grade"
+    },
+    "indicatedValueBySalesComparison": {
+      "type": "number",
+      "description": "indicated value by sales comparison approach"
+    },
+    "indicatedValueByCostApproach": {
+      "type": "number",
+      "description": "indicated value by cost approach (if developed)"
+    },
+    "finalAppraisedValue": {
+      "type": "number",
+      "description": "appraiser's final opinion of market value"
+    },
+    "comparables": {
+      "type": "array",
+      "description": "flattened sales-comparison grid, one entry per comparable sale with a sale price",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "comparableNumber": {
+            "type": "integer",
+            "description": "comparable sale number (1, 2, 3, ...)"
+          },
+          "address": {
+            "type": "string",
+            "description": "comparable street address on one line"
+          },
+          "proximityToSubject": {
+            "type": "string",
+            "description": "proximity to subject (e.g. 0.12 miles E)"
+          },
+          "salePrice": {
+            "type": "number",
+            "description": "comparable sale price"
+          },
+          "salePricePerGla": {
+            "type": "number",
+            "description": "sale price per gross living area sq.ft."
+          },
+          "grossLivingAreaSqft": {
+            "type": "number",
+            "description": "comparable gross living area in sq.ft."
+          },
+          "siteAreaSqft": {
+            "type": "number",
+            "description": "comparable site/lot area in sq.ft."
+          },
+          "locationAdjustment": {
+            "type": "number",
+            "description": "signed location line adjustment"
+          },
+          "glaAdjustment": {
+            "type": "number",
+            "description": "signed gross living area line adjustment"
+          },
+          "conditionAdjustment": {
+            "type": "number",
+            "description": "signed condition line adjustment"
+          },
+          "netAdjustmentTotal": {
+            "type": "number",
+            "description": "signed net adjustment total (negative if minus box checked)"
+          },
+          "adjustedSalePrice": {
+            "type": "number",
+            "description": "adjusted sale price of the comparable"
+          }
+        },
+        "required": [
+          "comparableNumber",
+          "address",
+          "salePrice",
+          "netAdjustmentTotal",
+          "adjustedSalePrice"
+        ]
+      }
+    }
+  },
+  "required": [
+    "subjectPropertyAddress",
+    "borrowerName",
+    "lenderClientName",
+    "contractPrice",
+    "finalAppraisedValue",
+    "comparables"
+  ]
+}

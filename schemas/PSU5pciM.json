@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "residential electric utility bill with a charges breakdown and a meter reading",
+  "properties": {
+    "billingPeriodStart": {
+      "type": "string",
+      "description": "the start date of the billing period in YYYY-MM-DD."
+    },
+    "billingPeriodEnd": {
+      "type": "string",
+      "description": "the end date of the billing period in YYYY-MM-DD."
+    },
+    "previousMeterRead": {
+      "type": "number",
+      "description": "the previous meter reading."
+    },
+    "currentMeterRead": {
+      "type": "number",
+      "description": "the current meter reading."
+    },
+    "consumptionKwh": {
+      "type": "number",
+      "description": "the metered electricity consumption in kWh for the period."
+    },
+    "charges": {
+      "type": "array",
+      "description": "the electric charge line items, each a charge name and its amount. exclude the total/summary row.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "the charge name as printed on the line."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the charge amount."
+          }
+        }
+      }
+    },
+    "totalElectricBill": {
+      "type": "number",
+      "description": "the total electric bill amount, equal to the sum of the charge lines."
+    }
+  }
+}

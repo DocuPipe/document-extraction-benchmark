@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "department": {
+      "type": "string",
+      "description": "department (部署), original Japanese"
+    },
+    "paymentDate": {
+      "type": "string",
+      "description": "travel-expense payment date (旅費支払日) as printed"
+    },
+    "preparationDate": {
+      "type": "string",
+      "description": "preparation date (作成年月日) as printed"
+    },
+    "tripRows": {
+      "type": "array",
+      "description": "one entry per trip-leg row; flattened across all employees",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "employeeNumber": {
+            "type": "string",
+            "description": "employee number (社員番号) this row belongs to"
+          },
+          "departureDateTime": {
+            "type": "string",
+            "description": "departure date and time (出発日時) as printed, e.g. 06/05 08:30"
+          },
+          "returnDateTime": {
+            "type": "string",
+            "description": "return date and time (帰着日時) as printed"
+          },
+          "distanceCategory": {
+            "type": "string",
+            "description": "distance category (距離区分), e.g. 隔地 / 附近 / 地域"
+          },
+          "purposeCategory": {
+            "type": "string",
+            "description": "purpose category (目的区分), e.g. 業務 / 研修"
+          },
+          "destination": {
+            "type": "string",
+            "description": "destination organization (出張先) in original Japanese; normalize all parentheses to fullwidth （ ）"
+          },
+          "route": {
+            "type": "string",
+            "description": "route segment (区間) in original Japanese, origin and destination separated by a fullwidth dash － (U+FF0D); normalize any horizontal-bar separator including the kanji 一 to － and drop surrounding spaces, e.g. 東京－大阪"
+          },
+          "nights": {
+            "type": "number",
+            "description": "number of nights stayed (宿泊数); 0 or omit if blank"
+          },
+          "paymentAmount": {
+            "type": "number",
+            "description": "payment amount (支払額) in yen"
+          }
+        },
+        "required": [
+          "employeeNumber",
+          "departureDateTime",
+          "returnDateTime",
+          "destination",
+          "route",
+          "paymentAmount"
+        ]
+      }
+    },
+    "employeeSubtotals": {
+      "type": "array",
+      "description": "one entry per employee group, holding that employee's 合計 subtotal",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "employeeNumber": {
+            "type": "string",
+            "description": "employee number (社員番号)"
+          },
+          "subtotal": {
+            "type": "number",
+            "description": "per-employee subtotal (合計) in yen"
+          }
+        },
+        "required": [
+          "employeeNumber",
+          "subtotal"
+        ]
+      }
+    },
+    "headcount": {
+      "type": "number",
+      "description": "total headcount from the bottom 合計 line (人)"
+    },
+    "grandTotal": {
+      "type": "number",
+      "description": "grand total (合計) in yen at the bottom"
+    }
+  },
+  "required": [
+    "department",
+    "tripRows",
+    "grandTotal"
+  ]
+}

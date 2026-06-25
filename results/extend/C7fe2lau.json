@@ -1,0 +1,92 @@
+{
+  "score": 1.0,
+  "cost": 0.07500000000000001,
+  "time_sec": 11.112,
+  "num_pages": 5,
+  "data": {
+    "dueDate": "2017-12-01",
+    "payeeBic": "BIC324098",
+    "invoiceId": "Snippet1",
+    "issueDate": "2017-11-13",
+    "payeeIban": "IBAN32423940",
+    "customerName": "BuyerTradingName AS",
+    "invoiceLines": [
+      {
+        "lineId": "1",
+        "itemName": "item name",
+        "unitCode": "C62",
+        "priceAmount": 410,
+        "sellersItemId": "97iugug876",
+        "taxCategoryId": "S",
+        "itemDescription": "Description of item",
+        "invoicedQuantity": 10,
+        "taxCategoryPercent": 25,
+        "lineExtensionAmount": 4000
+      },
+      {
+        "lineId": "2",
+        "itemName": "item name",
+        "unitCode": "C62",
+        "priceAmount": 200,
+        "sellersItemId": "97iugug876",
+        "taxCategoryId": "E",
+        "itemDescription": "Description of item",
+        "invoicedQuantity": 10,
+        "taxCategoryPercent": 0,
+        "lineExtensionAmount": 1000
+      },
+      {
+        "lineId": "3",
+        "itemName": "item name",
+        "unitCode": "C62",
+        "priceAmount": 100,
+        "sellersItemId": "97iugug876",
+        "taxCategoryId": "S",
+        "itemDescription": "Description of item",
+        "invoicedQuantity": 10,
+        "taxCategoryPercent": 25,
+        "lineExtensionAmount": 900
+      }
+    ],
+    "supplierName": "SupplierTradingName Ltd.",
+    "customerVatId": "SE4598375937",
+    "payableAmount": 6125,
+    "prepaidAmount": 1000,
+    "supplierVatId": "GB1232434",
+    "buyerReference": "0150abc",
+    "taxTotalAmount": 1225,
+    "invoiceTypeCode": "380",
+    "taxCurrencyCode": "SEK",
+    "allowanceCharges": [
+      {
+        "amount": 200,
+        "reason": "Cleaning",
+        "isCharge": true,
+        "baseAmount": 1000,
+        "reasonCode": "CG",
+        "taxCategoryPercent": 25
+      },
+      {
+        "amount": 200,
+        "reason": "Discount",
+        "isCharge": false,
+        "baseAmount": null,
+        "reasonCode": "95",
+        "taxCategoryPercent": 25
+      }
+    ],
+    "paymentMeansCode": "30",
+    "chargeTotalAmount": 200,
+    "taxExclusiveAmount": 5900,
+    "taxInclusiveAmount": 7125,
+    "customerCountryCode": "SE",
+    "lineExtensionAmount": 5900,
+    "supplierCountryCode": "GB",
+    "allowanceTotalAmount": 200,
+    "documentCurrencyCode": "EUR",
+    "invoicePeriodEndDate": "2017-12-31",
+    "invoicePeriodStartDate": "2017-12-01",
+    "customerRegistrationName": "Buyer Official Name",
+    "supplierRegistrationName": "SupplierOfficialName Ltd"
+  }
+}

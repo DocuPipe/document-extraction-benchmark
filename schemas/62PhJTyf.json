@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "A Dutch annual-financial-statement excerpt (jaarrekening) containing a balance sheet (balans) and an income statement (winst-en-verliesrekening). Extract only the current reporting period (the 31 december 2015 / year 2015 column); ignore the prior-year (31 december 2014 / 2014) comparative column entirely.",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "Name of the company the financial statement belongs to, as printed in the document header."
+    },
+    "balanceSheetDate": {
+      "type": "string",
+      "description": "The reporting date of the current-period balance sheet in YYYY-MM-DD format (the current-period balans date, not the prior-year date)."
+    },
+    "totalActiva": {
+      "type": "number",
+      "description": "The printed current-period total assets (the balans grand total under ACTIVA) as a number, without currency symbols or thousands separators."
+    },
+    "totalPassiva": {
+      "type": "number",
+      "description": "The printed current-period total equity and liabilities (the balans grand total under PASSIVA) as a number, without currency symbols or thousands separators."
+    },
+    "resultaat": {
+      "type": "number",
+      "description": "The current-period net result (the Resultaat line of the winst-en-verliesrekening) as a number; negative for a loss."
+    },
+    "balanceSheet": {
+      "type": "array",
+      "description": "Each balans line that carries a monetary amount in the current-period (2015) column, in printed order, covering both ACTIVA and PASSIVA. For each labeled line use the line's own reported figure: where a label has a single value take that value; where a group lists indented sub-amounts in the inner money column and a rolled-up subtotal in the outer (rightmost printed) money column, take the outer roll-up figure for the group and the inner figures for the indented detail lines. Skip pure section headers (e.g. Vaste activa, Vlottende activa) that carry no amount; do not include the balans grand total here. Use only the current-period column; never use the prior-year column.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineItem": {
+            "type": "string",
+            "description": "The Dutch line label exactly as printed in the balans, used as the matching key."
+          },
+          "amount": {
+            "type": "number",
+            "description": "The current-period monetary amount printed for this balans line, as a number in EUR without currency symbols or thousands separators."
+          }
+        }
+      }
+    },
+    "incomeStatement": {
+      "type": "array",
+      "description": "Each winst-en-verliesrekening line that carries a monetary amount in the current-period (2015) column, in printed order, covering revenue and costs. For each labeled line use the line's own reported figure: detail lines use the inner money column, subtotal/result lines (e.g. Bruto-omzetresultaat, Bedrijfsresultaat, Resultaat) use the outer rolled-up money column. Negative figures stay negative. Skip pure section headers (e.g. Kosten) that carry no amount. Use only the current-period column; never use the prior-year column.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineItem": {
+            "type": "string",
+            "description": "The Dutch line label exactly as printed in the winst-en-verliesrekening, used as the matching key."
+          },
+          "amount": {
+            "type": "number",
+            "description": "The current-period monetary amount printed for this income-statement line, as a number in EUR without currency symbols or thousands separators; negative for a loss or expense shown as negative."
+          }
+        }
+      }
+    }
+  }
+}

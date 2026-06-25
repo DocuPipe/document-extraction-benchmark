@@ -1,0 +1,137 @@
+{
+  "score": 1.0,
+  "cost": 0.0048995,
+  "time_sec": 0.4119741916656494,
+  "num_pages": 1,
+  "data": {
+    "projectName": "Plot 6",
+    "bills": [
+      {
+        "billNumber": 1.0,
+        "billName": "Preliminaries",
+        "amount": 352.0
+      },
+      {
+        "billNumber": 2.0,
+        "billName": "Excavating & filling",
+        "amount": 5158.95
+      },
+      {
+        "billNumber": 3.0,
+        "billName": "Insitu concrete works",
+        "amount": 2487.79
+      },
+      {
+        "billNumber": 4.0,
+        "billName": "Composite precast concrete",
+        "amount": 3315.56
+      },
+      {
+        "billNumber": 5.0,
+        "billName": "Precast concrete",
+        "amount": 70.67
+      },
+      {
+        "billNumber": 6.0,
+        "billName": "Masonry",
+        "amount": 31566.68
+      },
+      {
+        "billNumber": 7.0,
+        "billName": "Carpentry",
+        "amount": 10281.72
+      },
+      {
+        "billNumber": 8.0,
+        "billName": "Sheet roof coverings",
+        "amount": 599.79
+      },
+      {
+        "billNumber": 9.0,
+        "billName": "Tile and slate roof and wall coverings",
+        "amount": 15427.2
+      },
+      {
+        "billNumber": 10.0,
+        "billName": "General joinery",
+        "amount": 1545.26
+      },
+      {
+        "billNumber": 11.0,
+        "billName": "Windows, screens and lights",
+        "amount": 17675.61
+      },
+      {
+        "billNumber": 12.0,
+        "billName": "Doors, shutters and hatches",
+        "amount": 4090.66
+      },
+      {
+        "billNumber": 13.0,
+        "billName": "Stairs, walkways and balustrades",
+        "amount": 1838.42
+      },
+      {
+        "billNumber": 14.0,
+        "billName": "Floor, wall, ceiling and roof finishings",
+        "amount": 9648.06
+      },
+      {
+        "billNumber": 15.0,
+        "billName": "Decoration",
+        "amount": 4411.85
+      },
+      {
+        "billNumber": 16.0,
+        "billName": "Insulation, fire stopping & fire protection",
+        "amount": 4465.35
+      },
+      {
+        "billNumber": 17.0,
+        "billName": "Furniture, fittings and equipment",
+        "amount": 3057.88
+      },
+      {
+        "billNumber": 18.0,
+        "billName": "Drainage above ground",
+        "amount": 2151.63
+      },
+      {
+        "billNumber": 19.0,
+        "billName": "Drainage below ground",
+        "amount": 4245.46
+      },
+      {
+        "billNumber": 20.0,
+        "billName": "Site works",
+        "amount": 3620.52
+      },
+      {
+        "billNumber": 21.0,
+        "billName": "Soft landscaping",
+        "amount": 1685.66
+      },
+      {
+        "billNumber": 22.0,
+        "billName": "Mechanical services",
+        "amount": 779.93
+      },
+      {
+        "billNumber": 23.0,
+        "billName": "Electrical services",
+        "amount": 227.25
+      },
+      {
+        "billNumber": 24.0,
+        "billName": "Builder's work in connection with mechanical, electrical & transportation installations",
+        "amount": 66.02
+      },
+      {
+        "billNumber": 25.0,
+        "billName": "Main contractor's overheads and profit",
+        "amount": 51508.49
+      }
+    ],
+    "grandTotal": 180278.41
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "construction invoice with materials, labor, and miscellaneous charge line items plus summary totals",
+  "properties": {
+    "invoiceNumber": {
+      "type": "string",
+      "description": "the invoice number or identifier printed on the invoice."
+    },
+    "materials": {
+      "type": "array",
+      "description": "material charge line items, each a quantity of a material or work item at a unit rate. exclude any total/summary row such as TOTAL MATERIALS.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "the material or work description exactly as printed on the line."
+          },
+          "quantity": {
+            "type": "number",
+            "description": "the billed quantity of units for the line."
+          },
+          "rate": {
+            "type": "number",
+            "description": "the price per unit for the line."
+          },
+          "total": {
+            "type": "number",
+            "description": "the line total, equal to quantity times rate."
+          }
+        }
+      }
+    },
+    "labor": {
+      "type": "array",
+      "description": "labor charge line items, each a number of hours of a task at an hourly rate. exclude any total/summary row such as TOTAL LABOR.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "the labor task description exactly as printed on the line."
+          },
+          "hours": {
+            "type": "number",
+            "description": "the number of hours worked for the line."
+          },
+          "rate": {
+            "type": "number",
+            "description": "the hourly rate for the line."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the line amount, equal to hours times rate."
+          }
+        }
+      }
+    },
+    "miscellaneousCharges": {
+      "type": "array",
+      "description": "miscellaneous charge line items. exclude any total/summary row such as TOTAL MISCELLANEOUS.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "the miscellaneous charge description exactly as printed."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the charge amount."
+          }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "description": "invoice summary totals.",
+      "properties": {
+        "totalMaterials": {
+          "type": "number",
+          "description": "the printed sum of all material line totals."
+        },
+        "totalLabor": {
+          "type": "number",
+          "description": "the printed sum of all labor line amounts."
+        },
+        "totalMiscellaneous": {
+          "type": "number",
+          "description": "the printed sum of all miscellaneous charge amounts."
+        },
+        "subtotal": {
+          "type": "number",
+          "description": "the subtotal before tax."
+        },
+        "taxRate": {
+          "type": "number",
+          "description": "the tax rate applied, expressed as a percentage number (e.g. 3.8 means 3.80%)."
+        },
+        "totalTax": {
+          "type": "number",
+          "description": "the total tax amount."
+        },
+        "total": {
+          "type": "number",
+          "description": "the grand total including tax."
+        }
+      }
+    }
+  }
+}

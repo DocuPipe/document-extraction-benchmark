@@ -1,0 +1,192 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "statementMonth": {
+      "type": "string",
+      "description": "statement month (e.g. September 2015)"
+    },
+    "salesTotal": {
+      "type": "number",
+      "description": "total sales from account at a glance"
+    },
+    "transactionsCount": {
+      "type": "integer",
+      "description": "total number of transactions"
+    },
+    "creditsTotal": {
+      "type": "number",
+      "description": "total credits"
+    },
+    "creditsIssuedCount": {
+      "type": "integer",
+      "description": "number of credits issued"
+    },
+    "depositsTotal": {
+      "type": "number",
+      "description": "deposits total (sales minus credits)"
+    },
+    "settlementDiscountTotal": {
+      "type": "number",
+      "description": "settlement/discount total fees"
+    },
+    "interchangeTotal": {
+      "type": "number",
+      "description": "interchange total fees"
+    },
+    "otherFeesTotal": {
+      "type": "number",
+      "description": "other fees total"
+    },
+    "amountDebited": {
+      "type": "number",
+      "description": "total amount debited to the account"
+    },
+    "depositsByDay": {
+      "type": "array",
+      "description": "DEPOSIT BY DAY rows (exclude TOTAL)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "datePosted": {
+            "type": "string",
+            "format": "date",
+            "description": "date posted"
+          },
+          "referenceNumber": {
+            "type": "string",
+            "description": "reference number"
+          },
+          "tickets": {
+            "type": "integer",
+            "description": "number of tickets"
+          },
+          "grossAmount": {
+            "type": "number",
+            "description": "gross deposit amount"
+          },
+          "adjustments": {
+            "type": "number",
+            "description": "adjustments amount"
+          },
+          "nonSettlement": {
+            "type": "number",
+            "description": "non-settlement amount"
+          },
+          "discount": {
+            "type": "number",
+            "description": "discount amount"
+          },
+          "settledAmount": {
+            "type": "number",
+            "description": "settled net amount"
+          }
+        },
+        "required": [
+          "datePosted",
+          "grossAmount",
+          "settledAmount"
+        ]
+      }
+    },
+    "cardSummaryByType": {
+      "type": "array",
+      "description": "SETTLEMENT/DISCOUNT per card-program rows",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "card program / fee description code (e.g. VISA, MDBT)"
+          },
+          "items": {
+            "type": "integer",
+            "description": "number of items"
+          },
+          "amount": {
+            "type": "number",
+            "description": "transaction amount for this row"
+          },
+          "averageTicket": {
+            "type": "number",
+            "description": "average ticket amount"
+          },
+          "discountRate": {
+            "type": "number",
+            "description": "discount rate percent"
+          },
+          "itemRate": {
+            "type": "number",
+            "description": "item rate"
+          },
+          "feeAmount": {
+            "type": "number",
+            "description": "fee amount for this row"
+          }
+        },
+        "required": [
+          "description",
+          "items",
+          "amount",
+          "feeAmount"
+        ]
+      }
+    },
+    "chargebacks": {
+      "type": "array",
+      "description": "CHARGEBACKS rows (exclude TOTAL)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "datePosted": {
+            "type": "string",
+            "format": "date",
+            "description": "date posted"
+          },
+          "chargebackDate": {
+            "type": "string",
+            "format": "date",
+            "description": "chargeback date"
+          },
+          "referenceNumber": {
+            "type": "string",
+            "description": "reference number"
+          },
+          "tickets": {
+            "type": "integer",
+            "description": "number of tickets"
+          },
+          "amount": {
+            "type": "number",
+            "description": "chargeback amount"
+          },
+          "adjustments": {
+            "type": "number",
+            "description": "adjustments amount"
+          },
+          "settledAmount": {
+            "type": "number",
+            "description": "settled net amount (signed)"
+          }
+        },
+        "required": [
+          "datePosted",
+          "referenceNumber",
+          "settledAmount"
+        ]
+      }
+    }
+  },
+  "required": [
+    "statementMonth",
+    "salesTotal",
+    "creditsTotal",
+    "depositsTotal",
+    "depositsByDay",
+    "cardSummaryByType",
+    "chargebacks"
+  ]
+}

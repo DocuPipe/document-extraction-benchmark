@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "irs form w-2 wage and tax statement, extracting the standard lettered and numbered box values for a single consolidated form.",
+  "properties": {
+    "employeeName": {
+      "type": "string",
+      "description": "box e employee name exactly as printed."
+    },
+    "employeeSSN": {
+      "type": "string",
+      "description": "box a employee social security number exactly as printed, including masking if present."
+    },
+    "employerName": {
+      "type": "string",
+      "description": "box c employer name exactly as printed."
+    },
+    "employerEIN": {
+      "type": "string",
+      "description": "box b employer federal id (ein) exactly as printed, including masking if present."
+    },
+    "box1Wages": {
+      "type": "number",
+      "description": "box 1 wages, tips, other compensation."
+    },
+    "box2FederalIncomeTax": {
+      "type": "number",
+      "description": "box 2 federal income tax withheld."
+    },
+    "box3SocialSecurityWages": {
+      "type": "number",
+      "description": "box 3 social security wages."
+    },
+    "box4SocialSecurityTax": {
+      "type": "number",
+      "description": "box 4 social security tax withheld."
+    },
+    "box5MedicareWages": {
+      "type": "number",
+      "description": "box 5 medicare wages and tips."
+    },
+    "box6MedicareTax": {
+      "type": "number",
+      "description": "box 6 medicare tax withheld."
+    },
+    "box10DependentCareBenefits": {
+      "type": "number",
+      "description": "box 10 dependent care benefits."
+    },
+    "box12": {
+      "type": "array",
+      "description": "box 12 entries, one per filled box 12 slot (12a-12d). exclude empty slots.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "box 12 letter code."
+          },
+          "amount": {
+            "type": "number",
+            "description": "box 12 dollar amount for the code."
+          }
+        }
+      }
+    },
+    "box14": {
+      "type": "array",
+      "description": "box 14 other entries, one per filled line. exclude empty lines.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "box 14 line label or code exactly as printed."
+          },
+          "amount": {
+            "type": "number",
+            "description": "box 14 dollar amount for the line."
+          }
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "description": "box 15 two-letter state abbreviation."
+    },
+    "stateEmployerId": {
+      "type": "string",
+      "description": "box 15 employer's state id number exactly as printed, including masking if present."
+    },
+    "box16StateWages": {
+      "type": "number",
+      "description": "box 16 state wages, tips, etc."
+    },
+    "box17StateIncomeTax": {
+      "type": "number",
+      "description": "box 17 state income tax."
+    },
+    "box18LocalWages": {
+      "type": "number",
+      "description": "box 18 local wages, tips, etc."
+    },
+    "box19LocalIncomeTax": {
+      "type": "number",
+      "description": "box 19 local income tax."
+    },
+    "box20LocalityName": {
+      "type": "string",
+      "description": "box 20 locality name exactly as printed."
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "Air Waybill",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "issuingCarrier": {
+      "type": "string",
+      "description": "the issuing airline (e.g. 'Ethiopian Airlines')"
+    },
+    "awbNumber": {
+      "type": "string",
+      "description": "the master air waybill number joined into one string (e.g. '071 DXB 1276 0786')"
+    },
+    "shipperName": {
+      "type": "string",
+      "description": "the shipper organization name"
+    },
+    "shipperAddress": {
+      "type": "string",
+      "description": "the shipper address lines joined with commas"
+    },
+    "consigneeName": {
+      "type": "string",
+      "description": "the consignee organization name"
+    },
+    "consigneeAddress": {
+      "type": "string",
+      "description": "the consignee address lines joined with commas"
+    },
+    "issuingAgentName": {
+      "type": "string",
+      "description": "the issuing carrier's agent name (e.g. 'Hawk Freight Services FZE')"
+    },
+    "agentCity": {
+      "type": "string",
+      "description": "the issuing agent city (e.g. 'Dubai')"
+    },
+    "agentReference": {
+      "type": "string",
+      "description": "the agent reference number (e.g. 'DXB/UE21878')"
+    },
+    "airportOfDeparture": {
+      "type": "string",
+      "description": "the place / airport of departure"
+    },
+    "airportOfDestination": {
+      "type": "string",
+      "description": "the airport of destination (e.g. 'Addis Ababa')"
+    },
+    "currency": {
+      "type": "string",
+      "description": "the currency code (e.g. 'AED')"
+    },
+    "pieces": {
+      "type": "number",
+      "description": "the number of pieces (RCP) (e.g. 60)"
+    },
+    "grossWeightKg": {
+      "type": "number",
+      "description": "the gross weight in kilograms (e.g. 2520)"
+    },
+    "chargeableWeightKg": {
+      "type": "number",
+      "description": "the chargeable weight (e.g. 2520)"
+    },
+    "rateClass": {
+      "type": "string",
+      "description": "the rate class code (e.g. 'Q')"
+    },
+    "goodsDescription": {
+      "type": "string",
+      "description": "the nature and quantity of goods (e.g. 'MOSQUITO NETS')"
+    },
+    "declaredValueForCarriage": {
+      "type": "string",
+      "description": "declared value for carriage as printed (e.g. 'NVD')"
+    },
+    "declaredValueForCustoms": {
+      "type": "string",
+      "description": "declared value for customs as printed (e.g. 'NCV')"
+    },
+    "executedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the date the AWB was executed in YYYY-MM-DD"
+    },
+    "executedAtPlace": {
+      "type": "string",
+      "description": "the place where the AWB was executed (e.g. 'Dubai')"
+    }
+  },
+  "required": [
+    "issuingCarrier",
+    "awbNumber",
+    "shipperName",
+    "consigneeName",
+    "airportOfDestination",
+    "pieces",
+    "grossWeightKg",
+    "goodsDescription"
+  ]
+}

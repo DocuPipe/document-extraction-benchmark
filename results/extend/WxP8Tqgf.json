@@ -1,0 +1,89 @@
+{
+  "score": 0.9429347826086957,
+  "cost": 0.0625,
+  "time_sec": 25.676,
+  "num_pages": 1,
+  "data": {
+    "payLines": [
+      {
+        "base": 67.66808,
+        "voce": "0",
+        "quantita": 23,
+        "competenze": 1556.37,
+        "trattenute": null,
+        "description": "Retribuzione ordinaria",
+        "unitaDiMisura": "GIORNI"
+      },
+      {
+        "base": null,
+        "voce": "200",
+        "quantita": 32,
+        "competenze": null,
+        "trattenute": null,
+        "description": "Ferie godute",
+        "unitaDiMisura": "ORE"
+      },
+      {
+        "base": null,
+        "voce": "210",
+        "quantita": 4,
+        "competenze": null,
+        "trattenute": null,
+        "description": "Permessi riduz. orario goduti",
+        "unitaDiMisura": "ORE"
+      },
+      {
+        "base": null,
+        "voce": "221",
+        "quantita": 4,
+        "competenze": null,
+        "trattenute": null,
+        "description": "Permessi ex-festivita' goduti",
+        "unitaDiMisura": "ORE"
+      },
+      {
+        "base": 67.66808,
+        "voce": "230",
+        "quantita": 1,
+        "competenze": 67.67,
+        "trattenute": null,
+        "description": "Festivita'",
+        "unitaDiMisura": "GIORNI"
+      },
+      {
+        "base": 67.66808,
+        "voce": "232",
+        "quantita": 1,
+        "competenze": 67.67,
+        "trattenute": null,
+        "description": "Festivita' in domenica",
+        "unitaDiMisura": "GIORNI"
+      },
+      {
+        "base": 67.66808,
+        "voce": "400",
+        "quantita": 2,
+        "competenze": 135.34,
+        "trattenute": null,
+        "description": "Carenza malattia",
+        "unitaDiMisura": "GIORNI"
+      },
+      {
+        "base": null,
+        "voce": "978",
+        "quantita": null,
+        "competenze": 80,
+        "trattenute": null,
+        "description": "Credito art. 1 DL 66/2014 2017",
+        "unitaDiMisura": null
+      }
+    ],
+    "payPeriod": "GENNAIO 2017",
+    "employeeName": "LAZIONE UNIVERSITA' 2017",
+    "employerName": "DITTA DI PROVA",
+    "nettoInBusta": 1447,
+    "codiceFiscale": "LZNNRS80A41D548V",
+    "totaleCompetenze": 1907.05,
+    "totaleTrattenute": 460.41
+  }
+}

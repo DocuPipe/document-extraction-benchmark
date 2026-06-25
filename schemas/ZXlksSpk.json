@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "bill of quantities summary page listing each work-section bill and its total, plus the project grand total",
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "description": "the project or plot identifier the bill of quantities is for."
+    },
+    "bills": {
+      "type": "array",
+      "description": "each work-section bill listed in the summary, with its number, name, and total. exclude the project grand total row.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "billNumber": {
+            "type": "number",
+            "description": "the bill number as printed (e.g. 1, 2, 3)."
+          },
+          "billName": {
+            "type": "string",
+            "description": "the bill / work-section name exactly as printed."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the bill total amount, numeric only without currency symbol or thousands separators."
+          }
+        }
+      }
+    },
+    "grandTotal": {
+      "type": "number",
+      "description": "the project grand total exclusive of credits, adjustments and VAT, numeric only."
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "score": 1.0,
+  "cost": 0.043480000000000005,
+  "time_sec": 22.559537887573242,
+  "num_pages": 1,
+  "data": {
+    "companyName": "אורן טכנולוגיות בע״מ",
+    "reportYear": 2024.0,
+    "currencyUnits": "אלפי ש״ח",
+    "balanceSheetLineItems": [
+      {
+        "section": "נכסים",
+        "label": "מזומנים ושווי מזומנים",
+        "currentYearAmount": 1250.0,
+        "priorYearAmount": 980.0
+      },
+      {
+        "section": "נכסים",
+        "label": "לקוחות",
+        "currentYearAmount": 3420.0,
+        "priorYearAmount": 2890.0
+      },
+      {
+        "section": "נכסים",
+        "label": "מלאי",
+        "currentYearAmount": 1870.0,
+        "priorYearAmount": 2100.0
+      },
+      {
+        "section": "נכסים",
+        "label": "רכוש קבוע, נטו",
+        "currentYearAmount": 5640.0,
+        "priorYearAmount": 6010.0
+      },
+      {
+        "section": "התחייבויות והון",
+        "label": "ספקים",
+        "currentYearAmount": 2150.0,
+        "priorYearAmount": 1940.0
+      },
+      {
+        "section": "התחייבויות והון",
+        "label": "הלוואות לזמן קצר",
+        "currentYearAmount": 1800.0,
+        "priorYearAmount": 2200.0
+      },
+      {
+        "section": "התחייבויות והון",
+        "label": "הלוואות לזמן ארוך",
+        "currentYearAmount": 3400.0,
+        "priorYearAmount": 3900.0
+      },
+      {
+        "section": "התחייבויות והון",
+        "label": "הון מניות",
+        "currentYearAmount": 2000.0,
+        "priorYearAmount": 2000.0
+      },
+      {
+        "section": "התחייבויות והון",
+        "label": "עודפים",
+        "currentYearAmount": 2830.0,
+        "priorYearAmount": 1940.0
+      }
+    ],
+    "totalAssets": 12180.0,
+    "totalLiabilitiesAndEquity": 12180.0,
+    "incomeStatementLineItems": [
+      {
+        "label": "הכנסות ממכירות",
+        "currentYearAmount": 18500.0,
+        "priorYearAmount": 16200.0
+      },
+      {
+        "label": "עלות המכר",
+        "currentYearAmount": -11100.0,
+        "priorYearAmount": -9720.0
+      },
+      {
+        "label": "הוצאות הנהלה וכלליות",
+        "currentYearAmount": -3200.0,
+        "priorYearAmount": -2950.0
+      },
+      {
+        "label": "הוצאות מימון",
+        "currentYearAmount": -480.0,
+        "priorYearAmount": -560.0
+      }
+    ],
+    "netIncome": 3720.0
+  }
+}

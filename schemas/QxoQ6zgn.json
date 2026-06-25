@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "productCategory": {
+      "type": "string",
+      "description": "the product category label printed in the product/packing header (e.g. 'powder detergent')"
+    },
+    "items": {
+      "type": "array",
+      "description": "one entry per row of the packing/carton specification table",
+      "items": {
+        "type": "object",
+        "properties": {
+          "productPacking": {
+            "type": "string",
+            "description": "the product/packing label exactly as printed including pack count and unit size (e.g. 'Brand 12 X 1kg')"
+          },
+          "cartonsPer20ft": {
+            "type": "number",
+            "description": "number of cartons that fit in a 20 foot container"
+          },
+          "cartonsPer40ft": {
+            "type": "number",
+            "description": "number of cartons that fit in a 40 foot container"
+          },
+          "cartonDimensionCm": {
+            "type": "string",
+            "description": "carton dimension in cm as printed in length x width x height form (e.g. '40.00 X 25.00 X 30.00')"
+          },
+          "cartonSizeM3": {
+            "type": "number",
+            "description": "carton size (volume) in cubic meters"
+          },
+          "netWeightKg": {
+            "type": "number",
+            "description": "net weight per carton in kg (kg/ltr column)"
+          },
+          "grossWeightKg": {
+            "type": "number",
+            "description": "gross weight per carton in kg"
+          }
+        },
+        "required": [
+          "productPacking",
+          "cartonsPer20ft",
+          "cartonsPer40ft",
+          "cartonDimensionCm",
+          "cartonSizeM3",
+          "netWeightKg",
+          "grossWeightKg"
+        ]
+      }
+    }
+  },
+  "required": [
+    "productCategory",
+    "items"
+  ]
+}

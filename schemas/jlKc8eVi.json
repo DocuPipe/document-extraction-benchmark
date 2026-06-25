@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sellerName": {
+      "type": "string",
+      "description": "seller company name printed in the top-right header (株式会社 ...)"
+    },
+    "sellerPhone": {
+      "type": "string",
+      "description": "seller telephone number (TEL) in the top-right header"
+    },
+    "buyerName": {
+      "type": "string",
+      "description": "buyer / addressee name shown after 御中 on the left"
+    },
+    "buyerAddress": {
+      "type": "string",
+      "description": "buyer address shown after 御住所"
+    },
+    "branch": {
+      "type": "string",
+      "description": "issuing branch (支店)"
+    },
+    "personInCharge": {
+      "type": "string",
+      "description": "person in charge (担当者)"
+    },
+    "issueDate": {
+      "type": "string",
+      "description": "issue date printed top-right in Japanese era format, exactly as shown"
+    },
+    "lineItems": {
+      "type": "array",
+      "description": "one entry per product row in the item table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "productName": {
+            "type": "string",
+            "description": "product name (商品名), original Japanese"
+          },
+          "productCode": {
+            "type": "string",
+            "description": "product code (商品コード) as printed"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "quantity (数量)"
+          },
+          "unitPrice": {
+            "type": "number",
+            "description": "unit price (単価) in yen"
+          },
+          "discountPercent": {
+            "type": "number",
+            "description": "discount percentage (値引き), numeric without percent sign"
+          },
+          "subtotal": {
+            "type": "number",
+            "description": "line subtotal (小計) in yen"
+          },
+          "remark": {
+            "type": "string",
+            "description": "remark column (適用), e.g. 特別セール割引; empty if none"
+          }
+        },
+        "required": [
+          "productName",
+          "productCode",
+          "quantity",
+          "unitPrice",
+          "subtotal"
+        ]
+      }
+    },
+    "grandTotal": {
+      "type": "number",
+      "description": "grand total (合計) in yen, number only without 円 or separators"
+    }
+  },
+  "required": [
+    "sellerName",
+    "buyerName",
+    "issueDate",
+    "lineItems",
+    "grandTotal"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sheetNumber": {
+      "type": "string",
+      "description": "Drawing sheet number shown in the title block"
+    },
+    "sheetTitle": {
+      "type": "string",
+      "description": "Title of the sheet shown in the title block"
+    },
+    "doorSchedule": {
+      "type": "array",
+      "description": "Rows of the DOOR SCHEDULE table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mark": {
+            "type": "string",
+            "description": "Door mark or tag from the Mark column"
+          },
+          "doorType": {
+            "type": "string",
+            "description": "Door type description"
+          },
+          "width": {
+            "type": "string",
+            "description": "Door width as printed, in feet-inches"
+          },
+          "height": {
+            "type": "string",
+            "description": "Door height as printed, in feet-inches"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Comments for this door, if any"
+          }
+        }
+      }
+    },
+    "roomSchedule": {
+      "type": "array",
+      "description": "Rows of the ROOM SCHEDULE table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "roomNo": {
+            "type": "string",
+            "description": "Room number from the No. column"
+          },
+          "name": {
+            "type": "string",
+            "description": "Room name"
+          },
+          "area": {
+            "type": "string",
+            "description": "Room area as printed, including unit"
+          },
+          "perimeter": {
+            "type": "string",
+            "description": "Room perimeter as printed, in feet-inches"
+          },
+          "floorFinish": {
+            "type": "string",
+            "description": "Floor finish, if specified"
+          },
+          "wallFinish": {
+            "type": "string",
+            "description": "Wall finish, if specified"
+          },
+          "ceilingFinish": {
+            "type": "string",
+            "description": "Ceiling finish, if specified"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Comments for this room, if any"
+          }
+        }
+      }
+    },
+    "windowSchedule": {
+      "type": "array",
+      "description": "Rows of the WINDOW SCHEDULE table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mark": {
+            "type": "string",
+            "description": "Window mark or tag from the Mark column"
+          },
+          "type": {
+            "type": "string",
+            "description": "Window operation type",
+            "enum": [
+              "FIXED",
+              "Casement",
+              "AWNING"
+            ]
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Quantity of this window type from the QTY column"
+          },
+          "width": {
+            "type": "string",
+            "description": "Window width as printed, in feet-inches"
+          },
+          "height": {
+            "type": "string",
+            "description": "Window height as printed, in feet-inches"
+          },
+          "shgcMax": {
+            "type": "number",
+            "description": "Maximum Solar Heat Gain Coefficient"
+          },
+          "uFactorMax": {
+            "type": "number",
+            "description": "Maximum U-Factor"
+          },
+          "tempered": {
+            "type": "boolean",
+            "description": "Whether the window is tempered (Yes in the Tempered column)"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Comments for this window, if any"
+          }
+        }
+      }
+    }
+  }
+}

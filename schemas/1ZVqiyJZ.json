@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "homeowners insurance policy declarations page with coverage limits and policy details",
+  "properties": {
+    "namedInsured": {
+      "type": "string",
+      "description": "the named insured / policyholder name exactly as printed."
+    },
+    "policyNumber": {
+      "type": "string",
+      "description": "the policy number."
+    },
+    "policyForm": {
+      "type": "string",
+      "description": "the policy form code only, without the descriptive suffix (e.g. HO-3)."
+    },
+    "inceptionDate": {
+      "type": "string",
+      "description": "the policy inception/effective date in YYYY-MM-DD format."
+    },
+    "expirationDate": {
+      "type": "string",
+      "description": "the policy expiration date in YYYY-MM-DD format."
+    },
+    "deductible": {
+      "type": "number",
+      "description": "the policy deductible amount, numeric only."
+    },
+    "policyPremium": {
+      "type": "number",
+      "description": "the total policy premium, numeric only."
+    },
+    "yearBuilt": {
+      "type": "number",
+      "description": "the year the insured dwelling was built."
+    },
+    "construction": {
+      "type": "string",
+      "description": "the dwelling construction type as printed."
+    },
+    "propertyAddress": {
+      "type": "string",
+      "description": "the insured property address on one line as printed."
+    },
+    "agentName": {
+      "type": "string",
+      "description": "the agent or agency contact name."
+    },
+    "coverages": {
+      "type": "array",
+      "description": "each coverage line from the declarations with its limit. include both the property coverages (dwelling, other structures, personal property, loss of use) and the liability coverages (liability, medical).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "coverageType": {
+            "type": "string",
+            "description": "the coverage name only, without the section-letter prefix (e.g. 'Dwelling' not '(A) Dwelling')."
+          },
+          "limit": {
+            "type": "number",
+            "description": "the coverage limit amount, numeric only."
+          },
+          "basis": {
+            "type": "string",
+            "description": "the basis qualifier printed next to the limit if any, else null (e.g. 'Each Occurrence', 'Each Person')."
+          }
+        }
+      }
+    }
+  }
+}

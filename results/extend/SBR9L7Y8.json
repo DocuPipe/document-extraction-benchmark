@@ -1,0 +1,74 @@
+{
+  "score": 0.4482758620689655,
+  "cost": 0.0625,
+  "time_sec": 14.416,
+  "num_pages": 1,
+  "data": {
+    "grade": "03",
+    "payments": [
+      {
+        "amount": 1095000,
+        "difference": null,
+        "description": "משולב אופק חדש"
+      },
+      {
+        "amount": 109500,
+        "difference": null,
+        "description": "גמול חינוך כיתה"
+      },
+      {
+        "amount": 61600,
+        "difference": null,
+        "description": "קצובת נסיעה"
+      },
+      {
+        "amount": 3038,
+        "difference": null,
+        "description": "החזר טלפון"
+      },
+      {
+        "amount": 15400,
+        "difference": null,
+        "description": "מק' נסיעות בתפק."
+      }
+    ],
+    "netToBank": 905328,
+    "deductions": [
+      {
+        "amount": 185467,
+        "difference": null,
+        "description": "מס הכנסה"
+      },
+      {
+        "amount": 50589,
+        "difference": null,
+        "description": "ק.השתל(ארג)בינ\"ל"
+      },
+      {
+        "amount": 59571,
+        "difference": null,
+        "description": "ביטוח לאומי"
+      },
+      {
+        "amount": 55491,
+        "difference": null,
+        "description": "ביטוח בריאות"
+      },
+      {
+        "amount": 24090,
+        "difference": null,
+        "description": "דמי ניהול פנסיה ת"
+      },
+      {
+        "amount": 4002,
+        "difference": null,
+        "description": "קופת גמל רשף"
+      }
+    ],
+    "totalHours": 176,
+    "payPeriodYear": 2008,
+    "totalPayments": 1284538,
+    "payPeriodMonth": 9,
+    "totalDeductions": 379210
+  }
+}

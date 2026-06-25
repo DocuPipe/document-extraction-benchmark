@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "An electric utility bill from a regulated distribution company showing account header fields, supply and delivery charge totals, meter usage in kWh, peak demand in kW, and an itemized delivery charge breakdown.",
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "description": "The account number printed in the bill header, kept exactly as shown including any dashes."
+    },
+    "meterNumber": {
+      "type": "string",
+      "description": "The meter number printed in the header and meter-reading row, kept exactly as shown."
+    },
+    "serviceAddress": {
+      "type": "string",
+      "description": "The single-line service address the bill is rendered to, joined as street then city state zip."
+    },
+    "dueDate": {
+      "type": "string",
+      "description": "The payment due date printed in the amount-due header box, in YYYY-MM-DD format."
+    },
+    "billingPeriodStart": {
+      "type": "string",
+      "description": "The start date of the billing period from the meter-reading dates, in YYYY-MM-DD format."
+    },
+    "billingPeriodEnd": {
+      "type": "string",
+      "description": "The end date of the billing period from the meter-reading dates, in YYYY-MM-DD format."
+    },
+    "daysBilled": {
+      "type": "number",
+      "description": "The number of days billed printed in the meter-reading section."
+    },
+    "totalAmountDue": {
+      "type": "number",
+      "description": "The total amount due printed in the header amount-due box and account summary, as a number."
+    },
+    "totalSupplyCharges": {
+      "type": "number",
+      "description": "The total supply charges printed in the billing summary, as a number."
+    },
+    "totalDeliveryCharges": {
+      "type": "number",
+      "description": "The total delivery charges printed in the billing summary and at the end of the delivery details, as a number."
+    },
+    "totalKwhDelivered": {
+      "type": "number",
+      "description": "The total kWh delivered for the billing period printed in the meter-reading section, as a number without separators."
+    },
+    "peakDemandKw": {
+      "type": "number",
+      "description": "The current-year peak demand in kW printed in the usage summary demand panel, as a number."
+    },
+    "charges": {
+      "type": "array",
+      "description": "each delivery/distribution charge line amount. include every charge line (positive charges and negative credits); exclude any total/summary row. the amounts sum to total delivery charges.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "The dollar amount for this charge line as a number without a currency symbol, negative for credits."
+          }
+        }
+      }
+    }
+  }
+}

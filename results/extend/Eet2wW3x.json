@@ -1,0 +1,79 @@
+{
+  "score": 1.0,
+  "cost": 0.0625,
+  "time_sec": 16.616,
+  "num_pages": 1,
+  "data": {
+    "charges": [
+      {
+        "roe": 1,
+        "unit": 1,
+        "total": 288.75,
+        "currency": "AED",
+        "vatAmount": 13.75,
+        "vatPercent": 5,
+        "description": "DELIVERY ORDER CHARGES",
+        "ratePerUnit": 275,
+        "currencyAmount": 275,
+        "totalPriceExclVat": 275
+      },
+      {
+        "roe": 1,
+        "unit": 1.903,
+        "total": 99.91,
+        "currency": "AED",
+        "vatAmount": 4.76,
+        "vatPercent": 5,
+        "description": "THC CHARGES",
+        "ratePerUnit": 50,
+        "currencyAmount": 95.15,
+        "totalPriceExclVat": 95.15
+      },
+      {
+        "roe": 1,
+        "unit": 1,
+        "total": 105,
+        "currency": "AED",
+        "vatAmount": 5,
+        "vatPercent": 5,
+        "description": "DOCUMENTATION CHARGES",
+        "ratePerUnit": 100,
+        "currencyAmount": 100,
+        "totalPriceExclVat": 100
+      },
+      {
+        "roe": 1,
+        "unit": 1,
+        "total": 262.5,
+        "currency": "AED",
+        "vatAmount": 12.5,
+        "vatPercent": 5,
+        "description": "HANDLING CHARGES",
+        "ratePerUnit": 250,
+        "currencyAmount": 250,
+        "totalPriceExclVat": 250
+      }
+    ],
+    "shipper": "PAHILAJRAI JAIKISHIN AND CO",
+    "currency": "AED",
+    "customer": "FRESA DEMO DUBAI LLC",
+    "totalVat": 36.01,
+    "consignee": "FRESA DEMO DUBAI LLC",
+    "jobNumber": "CCDXBSI18000061 / 27-NOV-18",
+    "volumeCbm": 1.903,
+    "weightKgs": 1116,
+    "grandTotal": 756.16,
+    "houseNumber": "500138050266 / 10-OCT-18",
+    "invoiceDate": "27-NOV-18 (CREATED)",
+    "masterNumber": "NSA.JEA.18/26917 / 12-OCT-18",
+    "totalExclVat": 720.15,
+    "vesselFlight": "NORTHERN GENERAL / 0068",
+    "amountInWords": "Dirham Seven Hundred Fifty-Six and Sixteen Fils Only",
+    "invoiceNumber": "INV1800564",
+    "numberOfPacks": 12,
+    "placeOfOrigin": "NHAVA SHEVA (JAWAHARLAL NEHRU), INDIA",
+    "paymentDueDate": "27-NOV-18",
+    "customerAddress": "AL NABHA, DUBAI",
+    "finalDestination": "JEBEL ALI, UAE"
+  }
+}

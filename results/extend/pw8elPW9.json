@@ -1,0 +1,92 @@
+{
+  "score": 0.8333333333333334,
+  "cost": 0.0625,
+  "time_sec": 13.598,
+  "num_pages": 1,
+  "data": {
+    "netIncome": 3720,
+    "reportYear": 2024,
+    "companyName": "אורן טכנולוגיות בע\"מ",
+    "totalAssets": 12180,
+    "currencyUnits": "אלפי ש\"ח",
+    "balanceSheetLineItems": [
+      {
+        "label": "מזומנים ושווי מזומנים",
+        "section": "מאזן",
+        "priorYearAmount": 980,
+        "currentYearAmount": 1250
+      },
+      {
+        "label": "לקוחות",
+        "section": "מאזן",
+        "priorYearAmount": 2890,
+        "currentYearAmount": 3420
+      },
+      {
+        "label": "מלאי",
+        "section": "מאזן",
+        "priorYearAmount": 2100,
+        "currentYearAmount": 1870
+      },
+      {
+        "label": "רכוש קבוע, נטו",
+        "section": "מאזן",
+        "priorYearAmount": 6010,
+        "currentYearAmount": 5640
+      },
+      {
+        "label": "ספקים",
+        "section": "מאזן",
+        "priorYearAmount": 1940,
+        "currentYearAmount": 2150
+      },
+      {
+        "label": "הלוואות לזמן קצר",
+        "section": "מאזן",
+        "priorYearAmount": 2200,
+        "currentYearAmount": 1800
+      },
+      {
+        "label": "הלוואות לזמן ארוך",
+        "section": "מאזן",
+        "priorYearAmount": 3900,
+        "currentYearAmount": 3400
+      },
+      {
+        "label": "הון מניות",
+        "section": "מאזן",
+        "priorYearAmount": 2000,
+        "currentYearAmount": 2000
+      },
+      {
+        "label": "עודפים",
+        "section": "מאזן",
+        "priorYearAmount": 1940,
+        "currentYearAmount": 2830
+      }
+    ],
+    "incomeStatementLineItems": [
+      {
+        "label": "הכנסות ממכירות",
+        "priorYearAmount": 16200,
+        "currentYearAmount": 18500
+      },
+      {
+        "label": "עלות המכר",
+        "priorYearAmount": -9720,
+        "currentYearAmount": -11100
+      },
+      {
+        "label": "הוצאות הנהלה וכלליות",
+        "priorYearAmount": -2950,
+        "currentYearAmount": -3200
+      },
+      {
+        "label": "הוצאות מימון",
+        "priorYearAmount": -560,
+        "currentYearAmount": -480
+      }
+    ],
+    "totalLiabilitiesAndEquity": 12180
+  }
+}

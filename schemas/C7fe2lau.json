@@ -1,0 +1,229 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "invoiceId": {
+      "type": "string",
+      "description": "cbc:ID invoice number"
+    },
+    "issueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "invoice issue date YYYY-MM-DD"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "payment due date YYYY-MM-DD"
+    },
+    "invoiceTypeCode": {
+      "type": "string",
+      "description": "invoice type code, e.g. 380"
+    },
+    "documentCurrencyCode": {
+      "type": "string",
+      "description": "document currency code, e.g. EUR"
+    },
+    "taxCurrencyCode": {
+      "type": "string",
+      "description": "tax currency code, e.g. SEK"
+    },
+    "buyerReference": {
+      "type": "string",
+      "description": "buyer reference"
+    },
+    "invoicePeriodStartDate": {
+      "type": "string",
+      "format": "date",
+      "description": "invoice period start YYYY-MM-DD"
+    },
+    "invoicePeriodEndDate": {
+      "type": "string",
+      "format": "date",
+      "description": "invoice period end YYYY-MM-DD"
+    },
+    "supplierName": {
+      "type": "string",
+      "description": "supplier party/trading name"
+    },
+    "supplierRegistrationName": {
+      "type": "string",
+      "description": "supplier legal registration name"
+    },
+    "supplierVatId": {
+      "type": "string",
+      "description": "supplier VAT company id"
+    },
+    "supplierCountryCode": {
+      "type": "string",
+      "description": "supplier country code"
+    },
+    "customerName": {
+      "type": "string",
+      "description": "customer party/trading name"
+    },
+    "customerRegistrationName": {
+      "type": "string",
+      "description": "customer legal registration name"
+    },
+    "customerVatId": {
+      "type": "string",
+      "description": "customer VAT company id"
+    },
+    "customerCountryCode": {
+      "type": "string",
+      "description": "customer country code"
+    },
+    "paymentMeansCode": {
+      "type": "string",
+      "description": "payment means code, e.g. 30"
+    },
+    "payeeIban": {
+      "type": "string",
+      "description": "payee financial account id (IBAN)"
+    },
+    "payeeBic": {
+      "type": "string",
+      "description": "payee financial institution branch id (BIC)"
+    },
+    "lineExtensionAmount": {
+      "type": "number",
+      "description": "LegalMonetaryTotal line extension amount"
+    },
+    "taxExclusiveAmount": {
+      "type": "number",
+      "description": "tax exclusive amount"
+    },
+    "taxInclusiveAmount": {
+      "type": "number",
+      "description": "tax inclusive amount"
+    },
+    "allowanceTotalAmount": {
+      "type": "number",
+      "description": "total allowances amount"
+    },
+    "chargeTotalAmount": {
+      "type": "number",
+      "description": "total charges amount"
+    },
+    "prepaidAmount": {
+      "type": "number",
+      "description": "prepaid amount"
+    },
+    "payableAmount": {
+      "type": "number",
+      "description": "amount due for payment"
+    },
+    "taxTotalAmount": {
+      "type": "number",
+      "description": "document tax total amount in document currency"
+    },
+    "allowanceCharges": {
+      "type": "array",
+      "description": "document-level allowance/charge entries",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isCharge": {
+            "type": "boolean",
+            "description": "true if a charge, false if an allowance/discount"
+          },
+          "reason": {
+            "type": "string",
+            "description": "allowance or charge reason text"
+          },
+          "reasonCode": {
+            "type": "string",
+            "description": "allowance or charge reason code"
+          },
+          "amount": {
+            "type": "number",
+            "description": "allowance/charge amount"
+          },
+          "baseAmount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "base amount, null if not present"
+          },
+          "taxCategoryPercent": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "applicable tax category percent, null if absent"
+          }
+        },
+        "required": [
+          "isCharge",
+          "amount"
+        ]
+      }
+    },
+    "invoiceLines": {
+      "type": "array",
+      "description": "one entry per cac:InvoiceLine",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lineId": {
+            "type": "string",
+            "description": "invoice line id"
+          },
+          "invoicedQuantity": {
+            "type": "number",
+            "description": "invoiced quantity"
+          },
+          "unitCode": {
+            "type": "string",
+            "description": "quantity unit code, e.g. C62"
+          },
+          "lineExtensionAmount": {
+            "type": "number",
+            "description": "line net amount"
+          },
+          "itemName": {
+            "type": "string",
+            "description": "item name"
+          },
+          "itemDescription": {
+            "type": "string",
+            "description": "item description"
+          },
+          "sellersItemId": {
+            "type": "string",
+            "description": "seller's item identification id"
+          },
+          "priceAmount": {
+            "type": "number",
+            "description": "item unit price"
+          },
+          "taxCategoryId": {
+            "type": "string",
+            "description": "classified tax category id, e.g. S or E"
+          },
+          "taxCategoryPercent": {
+            "type": "number",
+            "description": "classified tax category VAT percent"
+          }
+        },
+        "required": [
+          "lineId",
+          "invoicedQuantity",
+          "lineExtensionAmount",
+          "priceAmount"
+        ]
+      }
+    }
+  },
+  "required": [
+    "invoiceId",
+    "issueDate",
+    "documentCurrencyCode",
+    "payableAmount",
+    "invoiceLines"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "score": 1.0,
+  "cost": 0.125,
+  "time_sec": 15.984,
+  "num_pages": 2,
+  "data": {
+    "charges": [
+      {
+        "amount": 8.75,
+        "description": "Service Availability Charge"
+      },
+      {
+        "amount": 31.99,
+        "description": "Energy Charge 463 kWh x $0.0691"
+      },
+      {
+        "amount": 11.89,
+        "description": "Fuel Adjustment 463 kWh x $0.02568"
+      },
+      {
+        "amount": 5.72,
+        "description": "Regulatory Adj 463 kWh x $0.01236"
+      }
+    ],
+    "consumptionKwh": 463,
+    "billingPeriodEnd": "2021-10-18",
+    "currentMeterRead": 48374,
+    "previousMeterRead": 47911,
+    "totalElectricBill": 58.35,
+    "billingPeriodStart": "2021-09-18"
+  }
+}

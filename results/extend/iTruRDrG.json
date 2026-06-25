@@ -1,0 +1,77 @@
+{
+  "score": 0.7090909090909091,
+  "cost": 0.125,
+  "time_sec": 22.875,
+  "num_pages": 2,
+  "data": {
+    "carrier": "Ocean Network Express Pte. Ltd. (ONE)",
+    "cargoItems": [
+      {
+        "hsCode": "620690",
+        "cartons": null,
+        "weightKg": null,
+        "measurementCbm": null,
+        "goodsDescription": "LADIES' 58% LINEN 39% COTTON 3% ELASTANE WOVEN TOP"
+      },
+      {
+        "hsCode": "610442, 611020, 610452",
+        "cartons": 92,
+        "weightKg": 1008,
+        "measurementCbm": 8.01,
+        "goodsDescription": "1% SPANDEX KNITTED SKIRTS"
+      },
+      {
+        "hsCode": null,
+        "cartons": 17,
+        "weightKg": 213,
+        "measurementCbm": 1.23,
+        "goodsDescription": "LADIES' 90% COTTON 10% SPANDEX KNITTED DRESS"
+      },
+      {
+        "hsCode": null,
+        "cartons": 8,
+        "weightKg": 82,
+        "measurementCbm": 1.41,
+        "goodsDescription": "LADIES' 54% COTTON 45% NYLON 1% SPANDEX KNITTED PULLOVER"
+      },
+      {
+        "hsCode": "620349",
+        "cartons": 42,
+        "weightKg": 626,
+        "measurementCbm": 4.59,
+        "goodsDescription": "59% LYOCELL 27% COTTON 14% LINEN MEN'S WOVEN SHORT"
+      },
+      {
+        "hsCode": "620630",
+        "cartons": 5,
+        "weightKg": 73,
+        "measurementCbm": 0.73,
+        "goodsDescription": "62% COTTON 38% VISCOSE. - WOMEN'S WOVEN OUTWEAR"
+      }
+    ],
+    "dateIssued": "2023-01-25",
+    "sealNumber": "HKA130375",
+    "shipperName": "HECNY SHIPPING LTD.",
+    "cartonsTotal": 241,
+    "freightTerms": "OCEAN FREIGHT COLLECT",
+    "placeOfIssue": "SHENZHEN",
+    "vesselVoyage": "COSCO SPAIN 055E",
+    "bookingNumber": "HKGCJ3680701",
+    "consigneeName": "VINCE LLC",
+    "containerType": "20GP",
+    "grossWeightKg": 2539,
+    "portOfLoading": "HONG KONG",
+    "placeOfReceipt": "HONG KONG, HONG KONG",
+    "shipperAddress": "7/F, HECNY CARGO BLDG, 111 WAI YIP STREET KWUN TONG, KLN., HONG KONG",
+    "typeOfMovement": "FCL/FCL CY/CY",
+    "containerNumber": "KKTU8245698",
+    "notifyPartyName": "HECNY TRANSPORTATION INC.",
+    "placeOfDelivery": "LONG BEACH",
+    "portOfDischarge": "LONG BEACH, CA",
+    "consigneeAddress": "900 N CAHUENGA BLVD. LOS ANGELES, CA 90038, USA",
+    "dateLadenOnBoard": "2023-01-25",
+    "seaWaybillNumber": "ONEYHKGCJ3680701",
+    "grossMeasurementCbm": 22.52,
+    "serviceContractNumber": "LAX0056B22"
+  }
+}

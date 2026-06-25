@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "A French monthly payslip (bulletin de paie) showing employee/employer header fields, earnings, social-contribution lines and gross/net totals.",
+  "properties": {
+    "employeeName": {
+      "type": "string",
+      "description": "the employee's name without any honorific or title (exclude Mlle, M., Mme, etc.)."
+    },
+    "employerName": {
+      "type": "string",
+      "description": "Name of the employer as printed at the top of the payslip header."
+    },
+    "payPeriodStart": {
+      "type": "string",
+      "description": "Start of the pay period (Periode du) in YYYY-MM-DD format."
+    },
+    "payPeriodEnd": {
+      "type": "string",
+      "description": "End of the pay period (au) in YYYY-MM-DD format."
+    },
+    "paymentDate": {
+      "type": "string",
+      "description": "The payment date (Paiement le) in YYYY-MM-DD format."
+    },
+    "siret": {
+      "type": "string",
+      "description": "The employer SIRET number as printed, kept exactly including any spaces."
+    },
+    "totalBrut": {
+      "type": "number",
+      "description": "The gross pay total (Total Brut) as a number without separators."
+    },
+    "totalEmployeeContributions": {
+      "type": "number",
+      "description": "The total employee contributions (Total des Cotisations et Contributions, salarie/Retenue column) as a number."
+    },
+    "totalEmployerContributions": {
+      "type": "number",
+      "description": "The total employer contributions (Total des Cotisations et Contributions, Part employeur column) as a number."
+    },
+    "netImposable": {
+      "type": "number",
+      "description": "The taxable net amount (Net imposable) for the period as a number."
+    },
+    "netAPayer": {
+      "type": "number",
+      "description": "The net pay (NET A PAYER) as a number without separators."
+    },
+    "earnings": {
+      "type": "array",
+      "description": "Earnings lines above Total Brut (base salary, bonuses/primes); one object per printed line with a designation label.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "designation": {
+            "type": "string",
+            "description": "The earnings line label (Designation) exactly as printed in French."
+          },
+          "base": {
+            "type": "number",
+            "description": "The Base column value for this line as a number, or null when blank."
+          },
+          "rate": {
+            "type": "number",
+            "description": "The rate column (Taux salarial) for this line as a number, or null when blank."
+          },
+          "amount": {
+            "type": "number",
+            "description": "The earned amount (Gain) for this line as a number."
+          }
+        }
+      }
+    },
+    "contributions": {
+      "type": "array",
+      "description": "Social-contribution lines; one object per printed line that has a designation label (skip blank-label continuation rows).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "designation": {
+            "type": "string",
+            "description": "The contribution line label (Designation) exactly as printed in French; this is the matching key for the row."
+          },
+          "base": {
+            "type": "number",
+            "description": "The Base column value for this line as a number, or null when blank."
+          },
+          "employeeRate": {
+            "type": "number",
+            "description": "The employee rate (Taux salarial) for this line as a number, or null when blank."
+          },
+          "employeeAmount": {
+            "type": "number",
+            "description": "The employee deduction (Part salarie, Retenue column) for this line as a number, or null when blank."
+          },
+          "employerRate": {
+            "type": "number",
+            "description": "The employer rate (Taux patronal) for this line as a number, or null when blank."
+          },
+          "employerAmount": {
+            "type": "number",
+            "description": "The employer contribution (Part employeur) for this line as a number, or null when blank."
+          }
+        }
+      }
+    }
+  }
+}

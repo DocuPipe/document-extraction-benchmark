@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "patientName": {
+      "type": "string",
+      "description": "Patient name"
+    },
+    "mrn": {
+      "type": "string",
+      "description": "Medical record number"
+    },
+    "age": {
+      "type": "integer",
+      "description": "Patient age in years"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Patient sex as recorded",
+      "enum": [
+        "M",
+        "F"
+      ]
+    },
+    "admitDate": {
+      "type": "string",
+      "description": "Admission date in YYYY-MM-DD",
+      "format": "date"
+    },
+    "dischargeDate": {
+      "type": "string",
+      "description": "Discharge date in YYYY-MM-DD",
+      "format": "date"
+    },
+    "diagnoses": {
+      "type": "array",
+      "description": "Diagnoses from the numbered DIAGNOSIS list",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "diagnosis": {
+            "type": "string",
+            "description": "the diagnosis text, exactly as listed (one per item; exclude any leading list number/bullet)"
+          }
+        },
+        "required": [
+          "diagnosis"
+        ]
+      }
+    },
+    "dischargeMedications": {
+      "type": "array",
+      "description": "Discharge medications; empty if discharged with no medication",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Medication name"
+          },
+          "dose": {
+            "type": "string",
+            "description": "Dose, if stated"
+          },
+          "frequency": {
+            "type": "string",
+            "description": "Frequency, if stated"
+          }
+        }
+      }
+    },
+    "vitalsTemperature": {
+      "type": "string",
+      "description": "Temperature on discharge day as printed, including unit if given"
+    },
+    "vitalsPulseRate": {
+      "type": "integer",
+      "description": "Pulse rate on discharge day in beats per minute"
+    },
+    "vitalsRespirations": {
+      "type": "integer",
+      "description": "Respiratory rate on discharge day in breaths per minute"
+    },
+    "vitalsBloodPressure": {
+      "type": "string",
+      "description": "Blood pressure on discharge day as printed (e.g. 126/86)"
+    },
+    "vitalsO2Saturation": {
+      "type": "string",
+      "description": "Oxygen saturation on discharge day as printed (e.g. 98% on room air)"
+    },
+    "dischargeDestination": {
+      "type": "string",
+      "description": "Discharge destination"
+    },
+    "conditionOfDischarge": {
+      "type": "string",
+      "description": "Condition of discharge"
+    },
+    "signingProvider": {
+      "type": "string",
+      "description": "Name and credentials of the signing provider"
+    },
+    "signedDate": {
+      "type": "string",
+      "description": "Date the note was signed in YYYY-MM-DD",
+      "format": "date"
+    }
+  }
+}

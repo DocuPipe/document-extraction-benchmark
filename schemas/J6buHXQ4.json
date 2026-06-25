@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "authorityName": {
+      "type": "string",
+      "description": "Name of the local authority (מועצה מקומית)"
+    },
+    "reportYear": {
+      "type": "integer",
+      "description": "Fiscal year of the financial statements"
+    },
+    "amountUnits": {
+      "type": "string",
+      "description": "Units the amounts are stated in",
+      "enum": [
+        "אלפי ש\"ח",
+        "ש\"ח"
+      ]
+    },
+    "totalAssets": {
+      "type": "number",
+      "description": "Total assets at the report date for the current year (balance sheet)"
+    },
+    "totalLiabilitiesAndFunds": {
+      "type": "number",
+      "description": "Total liabilities and funds at the report date for the current year (balance sheet)"
+    },
+    "totalBudgetReceipts": {
+      "type": "number",
+      "description": "Grand total of regular-budget receipts for the actual current year (סה\"כ תקבולים)"
+    },
+    "totalBudgetPayments": {
+      "type": "number",
+      "description": "Grand total of regular-budget payments for the actual current year (סה\"כ תשלומים)"
+    },
+    "balanceSheetLineItems": {
+      "type": "array",
+      "description": "Balance-sheet line items (assets and liabilities) with both-year values",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "section": {
+            "type": "string",
+            "description": "Balance sheet side",
+            "enum": [
+              "נכסים",
+              "התחייבויות"
+            ]
+          },
+          "lineLabel": {
+            "type": "string",
+            "description": "Line item name as printed"
+          },
+          "currentYearAmount": {
+            "type": "number",
+            "description": "Amount for the current report year"
+          },
+          "priorYearAmount": {
+            "type": "number",
+            "description": "Amount for the prior year"
+          }
+        }
+      }
+    },
+    "budgetReceiptsByChapter": {
+      "type": "array",
+      "description": "Regular-budget receipts by chapter (תקבולים) from the budget summary form",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "chapterNumber": {
+            "type": "string",
+            "description": "Chapter number (מספר הפרק)"
+          },
+          "chapterName": {
+            "type": "string",
+            "description": "Chapter name (שם הפרק)"
+          },
+          "budgetAmount": {
+            "type": "number",
+            "description": "Budgeted amount for the current year (תקציב)"
+          },
+          "actualCurrentYear": {
+            "type": "number",
+            "description": "Actual amount for the current year (ביצוע)"
+          },
+          "actualPriorYear": {
+            "type": "number",
+            "description": "Actual amount for the prior year (ביצוע)"
+          }
+        }
+      }
+    },
+    "budgetPaymentsByChapter": {
+      "type": "array",
+      "description": "Regular-budget payments by chapter (תשלומים) from the budget summary form",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "chapterNumber": {
+            "type": "string",
+            "description": "Chapter number (מספר הפרק)"
+          },
+          "chapterName": {
+            "type": "string",
+            "description": "Chapter name (שם הפרק)"
+          },
+          "budgetAmount": {
+            "type": "number",
+            "description": "Budgeted amount for the current year (תקציב)"
+          },
+          "actualCurrentYear": {
+            "type": "number",
+            "description": "Actual amount for the current year (ביצוע)"
+          },
+          "actualPriorYear": {
+            "type": "number",
+            "description": "Actual amount for the prior year (ביצוע)"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "score": 0.6964285714285714,
+  "cost": 0.25,
+  "time_sec": 26.971,
+  "num_pages": 4,
+  "data": {
+    "reportYear": 2023,
+    "amountUnits": "ש\"ח",
+    "totalAssets": 163549,
+    "cashEndOfYear": 148820,
+    "organizationName": "המכון לאסטרטגיה ציונית (ע\"ר)",
+    "netRevenueForYear": -158537,
+    "netAssetsEndOfYear": -139624,
+    "statementLineItems": [
+      {
+        "lineLabel": "מזומנים ושווי מזומנים",
+        "statement": "מאזנים",
+        "priorYearAmount": 26239,
+        "currentYearAmount": 148820
+      },
+      {
+        "lineLabel": "חייבים ויתרות חובה",
+        "statement": "מאזנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": 0
+      },
+      {
+        "lineLabel": "רכוש קבוע",
+        "statement": "מאזנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": 14729
+      },
+      {
+        "lineLabel": "ספקים",
+        "statement": "מאזנים",
+        "priorYearAmount": 7326,
+        "currentYearAmount": 191560
+      },
+      {
+        "lineLabel": "זכאים ויתרות זכות",
+        "statement": "מאזנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": 111613
+      },
+      {
+        "lineLabel": "עתודה לפיצויי פרישה וגמלאות",
+        "statement": "מאזנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": 0
+      },
+      {
+        "lineLabel": "נכסים נטו שלא קיימת לגביהם הגבלה ששימשו לפעילות",
+        "statement": "מאזנים",
+        "priorYearAmount": 18913,
+        "currentYearAmount": -154353
+      },
+      {
+        "lineLabel": "נכסים נטו שלא קיימת לגביהם הגבלה ששימשו לרכוש קבוע",
+        "statement": "מאזנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": 14729
+      },
+      {
+        "lineLabel": "מחזור הפעילויות",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": 58000,
+        "currentYearAmount": 1730983
+      },
+      {
+        "lineLabel": "עלות הפעילויות",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": 140256,
+        "currentYearAmount": 1884836
+      },
+      {
+        "lineLabel": "הוצאות הנהלה וכלליות",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": 5100,
+        "currentYearAmount": 23205
+      },
+      {
+        "lineLabel": "הוצאות מימון",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": -3156,
+        "currentYearAmount": -18521
+      },
+      {
+        "lineLabel": "רווח נקי",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": -84200,
+        "currentYearAmount": -158537
+      },
+      {
+        "lineLabel": "רכישת נכסים קבועים ורכוש אחר",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": -17474
+      },
+      {
+        "lineLabel": "(פרעון) הלוואות והתחייבויות אחרות לזמן ארוך",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": 0,
+        "currentYearAmount": 0
+      },
+      {
+        "lineLabel": "יתרת מזומנים ושווי מזומנים לתחילת השנה",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": 109907,
+        "currentYearAmount": 26239
+      },
+      {
+        "lineLabel": "יתרת מזומנים ושווי מזומנים לסוף השנה",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": 26239,
+        "currentYearAmount": 148820
+      },
+      {
+        "lineLabel": "מזומנים נטו שנבעו מפעילות שוטפת",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": -83668,
+        "currentYearAmount": 140055
+      },
+      {
+        "lineLabel": "עליה במזומנים ושווי מזומנים",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": -83668,
+        "currentYearAmount": 122581
+      },
+      {
+        "lineLabel": "סה\"כ נכסים",
+        "statement": "מאזנים",
+        "priorYearAmount": 26239,
+        "currentYearAmount": 163549
+      },
+      {
+        "lineLabel": "התאמות הדרושות כדי להציג את המזומנים מפעילות שוטפת",
+        "statement": "דוח על תזרים המזומנים",
+        "priorYearAmount": 532,
+        "currentYearAmount": 298592
+      },
+      {
+        "lineLabel": "סה\"כ התחייבויות שוטפות",
+        "statement": "מאזנים",
+        "priorYearAmount": 7326,
+        "currentYearAmount": 303173
+      },
+      {
+        "lineLabel": "סה\"כ התחייבויות ונכסים נטו",
+        "statement": "מאזנים",
+        "priorYearAmount": 26239,
+        "currentYearAmount": 163549
+      },
+      {
+        "lineLabel": "הכנסות נטו מפעילות",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": -82256,
+        "currentYearAmount": -153853
+      },
+      {
+        "lineLabel": "הכנסות נטו לפני מימון",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": -87356,
+        "currentYearAmount": -177058
+      },
+      {
+        "lineLabel": "הכנסות נטו לשנה",
+        "statement": "דוחות על הפעילות",
+        "priorYearAmount": -84200,
+        "currentYearAmount": -158537
+      }
+    ],
+    "totalLiabilitiesAndNetAssets": 163549
+  }
+}

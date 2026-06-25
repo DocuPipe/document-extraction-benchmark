@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "fileReference": {
+      "type": "string",
+      "description": "the Aktenzeichen reference code printed in the header"
+    },
+    "investmentAmount": {
+      "type": "number",
+      "description": "the Anlagebetrag amount printed in the header, in DM as printed"
+    },
+    "savingsAllowance": {
+      "type": "number",
+      "description": "the Sparzulage amount printed in the header, in DM as printed"
+    },
+    "deductionRows": {
+      "type": "array",
+      "description": "one object per printed row of the lower deductions table (the Lohnsteuer / Krankenversicherung / Rentenversicherung / Arbeitslosenversicherung block). amounts in this table are printed without a decimal separator and the last two digits are cents, so divide by 100 (a printed value of 8940 means 89.40).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "accountingMonth": {
+            "type": "string",
+            "description": "the Abr. Mt. settlement-month code at the start of the row; null if the cell is blank"
+          },
+          "incomeTax": {
+            "type": "number",
+            "description": "the Lohnsteuer amount in column 28, in DM (the printed digits have no decimal separator, so the last two digits are cents)"
+          },
+          "healthInsurance": {
+            "type": "number",
+            "description": "the Krankenversicherung employee-share amount in column 31, in DM (the printed digits have no decimal separator, so the last two digits are cents)"
+          },
+          "pensionInsurance": {
+            "type": "number",
+            "description": "the Rentenversicherung employee-share amount in column 32, in DM (the printed digits have no decimal separator, so the last two digits are cents)"
+          },
+          "unemploymentInsurance": {
+            "type": "number",
+            "description": "the Arbeitslosenversicherung employee-share amount in column 33, in DM (the printed digits have no decimal separator, so the last two digits are cents)"
+          }
+        }
+      }
+    }
+  }
+}

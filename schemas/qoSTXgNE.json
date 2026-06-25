@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "organizationName": {
+      "type": "string",
+      "description": "Name of the nonprofit organization (ע\"ר)"
+    },
+    "reportYear": {
+      "type": "integer",
+      "description": "Fiscal year of the financial statements (year ended 31 December)"
+    },
+    "amountUnits": {
+      "type": "string",
+      "description": "Units the amounts are stated in",
+      "enum": [
+        "ש\"ח",
+        "אלפי ש\"ח"
+      ]
+    },
+    "totalAssets": {
+      "type": "number",
+      "description": "Total assets for the current year (סה\"כ נכסים)"
+    },
+    "totalLiabilitiesAndNetAssets": {
+      "type": "number",
+      "description": "Total liabilities and net assets for the current year (סה\"כ התחייבויות ונכסים נטו)"
+    },
+    "netRevenueForYear": {
+      "type": "number",
+      "description": "Net income (loss) for the year from the statement of activities (הכנסות נטו לשנה)"
+    },
+    "netAssetsEndOfYear": {
+      "type": "number",
+      "description": "Total net assets at end of current year (יתרה לסוף השנה, סך הכל)"
+    },
+    "cashEndOfYear": {
+      "type": "number",
+      "description": "Cash and equivalents at end of current year (יתרת מזומנים לסוף השנה)"
+    },
+    "statementLineItems": {
+      "type": "array",
+      "description": "Line items across the balance sheet, statement of activities, and cash flow statement",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "statement": {
+            "type": "string",
+            "description": "Which statement the line belongs to",
+            "enum": [
+              "מאזנים",
+              "דוחות על הפעילות",
+              "דוח על תזרים המזומנים"
+            ]
+          },
+          "lineLabel": {
+            "type": "string",
+            "description": "Line item name as printed"
+          },
+          "currentYearAmount": {
+            "type": "number",
+            "description": "Amount for the current report year"
+          },
+          "priorYearAmount": {
+            "type": "number",
+            "description": "Amount for the prior year"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "company name as printed at the top"
+    },
+    "reportYear": {
+      "type": "integer",
+      "description": "the current report year (the later of the two columns)"
+    },
+    "currencyUnits": {
+      "type": "string",
+      "description": "the amount units stated in the header (e.g. thousands of NIS)"
+    },
+    "balanceSheetLineItems": {
+      "type": "array",
+      "description": "leaf balance-sheet line items only (assets and liabilities/equity); exclude every total/subtotal row",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "section": {
+            "type": "string",
+            "description": "the Hebrew section heading the line falls under, exactly as printed in the document (e.g. נכסים for the assets section, התחייבויות והון for the liabilities-and-equity section); do not translate to English"
+          },
+          "label": {
+            "type": "string",
+            "description": "line item name as printed"
+          },
+          "currentYearAmount": {
+            "type": "number",
+            "description": "amount in the current-year column"
+          },
+          "priorYearAmount": {
+            "type": "number",
+            "description": "amount in the prior-year column"
+          }
+        },
+        "required": [
+          "section",
+          "label",
+          "currentYearAmount",
+          "priorYearAmount"
+        ]
+      }
+    },
+    "totalAssets": {
+      "type": "number",
+      "description": "the stated total assets for the current year"
+    },
+    "totalLiabilitiesAndEquity": {
+      "type": "number",
+      "description": "the stated total liabilities and equity for the current year"
+    },
+    "incomeStatementLineItems": {
+      "type": "array",
+      "description": "leaf income-statement line items only (revenue and expense lines); exclude the net-income/total row; expenses are negative",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "line item name as printed"
+          },
+          "currentYearAmount": {
+            "type": "number",
+            "description": "amount in the current-year column; expenses/deductions are negative"
+          },
+          "priorYearAmount": {
+            "type": "number",
+            "description": "amount in the prior-year column; expenses/deductions are negative"
+          }
+        },
+        "required": [
+          "label",
+          "currentYearAmount",
+          "priorYearAmount"
+        ]
+      }
+    },
+    "netIncome": {
+      "type": "number",
+      "description": "the stated net income for the current year"
+    }
+  },
+  "required": [
+    "companyName",
+    "reportYear",
+    "currencyUnits",
+    "balanceSheetLineItems",
+    "totalAssets",
+    "totalLiabilitiesAndEquity",
+    "incomeStatementLineItems",
+    "netIncome"
+  ]
+}

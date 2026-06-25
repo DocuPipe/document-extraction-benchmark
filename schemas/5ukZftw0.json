@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "datasetTotals": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "computed totals across all rows in the sheet",
+      "properties": {
+        "totalProfit": {
+          "type": "number",
+          "description": "sum of the Profit column across every row"
+        },
+        "totalUnitsSold": {
+          "type": "number",
+          "description": "sum of the Units Sold column across every row"
+        },
+        "rowCount": {
+          "type": "integer",
+          "description": "number of data rows in the sheet (excluding the header)"
+        }
+      },
+      "required": [
+        "totalProfit",
+        "totalUnitsSold",
+        "rowCount"
+      ]
+    },
+    "governmentSegmentRows": {
+      "type": "array",
+      "description": "one entry per data row whose Segment is exactly Government; exclude every other segment",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "country": {
+            "type": "string",
+            "description": "the Country value"
+          },
+          "product": {
+            "type": "string",
+            "description": "the Product value"
+          },
+          "quantitySold": {
+            "type": "number",
+            "description": "the Units Sold value"
+          },
+          "grossMarginPct": {
+            "type": "number",
+            "description": "gross margin percentage computed as (Sales - COGS) / Sales * 100, rounded to one decimal place"
+          },
+          "totalManufacturingCost": {
+            "type": "number",
+            "description": "Manufacturing Price multiplied by Units Sold"
+          },
+          "priceEffectiveDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "the date the product's sale price became effective, only if the dataset has a dedicated price-effective-date column; the transaction Date column is not a price-effective date, so if no such column exists, null"
+          }
+        },
+        "required": [
+          "country",
+          "product",
+          "quantitySold",
+          "grossMarginPct",
+          "totalManufacturingCost"
+        ]
+      }
+    },
+    "mostProfitableProduct": {
+      "type": "string",
+      "description": "the Product value of the single row with the highest Profit anywhere in the sheet"
+    }
+  },
+  "required": [
+    "datasetTotals",
+    "governmentSegmentRows",
+    "mostProfitableProduct"
+  ]
+}

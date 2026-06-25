@@ -1,0 +1,104 @@
+{
+  "score": 1.0,
+  "cost": 0.25,
+  "time_sec": 21.254,
+  "num_pages": 4,
+  "data": {
+    "labor": [
+      {
+        "rate": 60,
+        "hours": 30,
+        "amount": 1800,
+        "description": "Marking of foundation layout at site"
+      },
+      {
+        "rate": 60,
+        "hours": 23,
+        "amount": 1380,
+        "description": "Earth excavation up to the required depth by machine"
+      },
+      {
+        "rate": 60,
+        "hours": 19,
+        "amount": 1140,
+        "description": "Earth excavation and levelling of soil by hand-operated tools"
+      },
+      {
+        "rate": 60,
+        "hours": 35,
+        "amount": 2100,
+        "description": "Placing of PCC"
+      },
+      {
+        "rate": 60,
+        "hours": 76,
+        "amount": 4560,
+        "description": "Placement of reinforcement steel"
+      },
+      {
+        "rate": 60,
+        "hours": 53,
+        "amount": 3180,
+        "description": "Erection of concrete formworks for footings"
+      }
+    ],
+    "totals": {
+      "total": 32323.32,
+      "taxRate": 3.8,
+      "subtotal": 31140,
+      "totalTax": 1183.32,
+      "totalLabor": 14160,
+      "totalMaterials": 15790,
+      "totalMiscellaneous": 1190
+    },
+    "materials": [
+      {
+        "rate": 200,
+        "total": 1000,
+        "quantity": 5,
+        "description": "Marking of foundation layout at site"
+      },
+      {
+        "rate": 150,
+        "total": 600,
+        "quantity": 4,
+        "description": "Earth excavation up to the required depth by machine"
+      },
+      {
+        "rate": 125,
+        "total": 250,
+        "quantity": 2,
+        "description": "Earth excavation and levelling of soil by hand-operated tools"
+      },
+      {
+        "rate": 78,
+        "total": 1170,
+        "quantity": 15,
+        "description": "Placing of PCC"
+      },
+      {
+        "rate": 165,
+        "total": 4950,
+        "quantity": 30,
+        "description": "Placement of reinforcement steel"
+      },
+      {
+        "rate": 230,
+        "total": 7820,
+        "quantity": 34,
+        "description": "Erection of concrete formworks for footings"
+      }
+    ],
+    "invoiceNumber": "10001",
+    "miscellaneousCharges": [
+      {
+        "amount": 430,
+        "description": "Transportation of materials"
+      },
+      {
+        "amount": 760,
+        "description": "Consultations with architect"
+      }
+    ]
+  }
+}

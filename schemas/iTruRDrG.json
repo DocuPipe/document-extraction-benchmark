@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "Ocean Sea Waybill",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "carrier": {
+      "type": "string",
+      "description": "the ocean carrier issuing the waybill (e.g. 'Ocean Network Express')"
+    },
+    "seaWaybillNumber": {
+      "type": "string",
+      "description": "the sea waybill / bill of lading number (e.g. 'ONEYHKGCJ3680701')"
+    },
+    "bookingNumber": {
+      "type": "string",
+      "description": "the booking number (e.g. 'HKGCJ3680701')"
+    },
+    "shipperName": {
+      "type": "string",
+      "description": "the shipper / exporter company name"
+    },
+    "shipperAddress": {
+      "type": "string",
+      "description": "the shipper address lines joined with commas"
+    },
+    "consigneeName": {
+      "type": "string",
+      "description": "the consignee company name"
+    },
+    "consigneeAddress": {
+      "type": "string",
+      "description": "the consignee address lines joined with commas"
+    },
+    "notifyPartyName": {
+      "type": "string",
+      "description": "the notify party company name"
+    },
+    "vesselVoyage": {
+      "type": "string",
+      "description": "the ocean vessel name and voyage number (e.g. 'COSCO SPAIN 055E')"
+    },
+    "placeOfReceipt": {
+      "type": "string",
+      "description": "the place of receipt"
+    },
+    "portOfLoading": {
+      "type": "string",
+      "description": "the port of loading"
+    },
+    "portOfDischarge": {
+      "type": "string",
+      "description": "the port of discharge"
+    },
+    "placeOfDelivery": {
+      "type": "string",
+      "description": "the place of delivery"
+    },
+    "typeOfMovement": {
+      "type": "string",
+      "description": "the type of movement (e.g. 'FCL/FCL CY/CY')"
+    },
+    "containerNumber": {
+      "type": "string",
+      "description": "the container number (e.g. 'KKTU8245698')"
+    },
+    "sealNumber": {
+      "type": "string",
+      "description": "the seal / customs declaration number (e.g. 'HKA130375')"
+    },
+    "containerType": {
+      "type": "string",
+      "description": "the container type / size code (e.g. '20GP', '1X20ST')"
+    },
+    "cartonsTotal": {
+      "type": "number",
+      "description": "total number of cartons in the container (e.g. 241)"
+    },
+    "grossWeightKg": {
+      "type": "number",
+      "description": "container total gross weight in kilograms (e.g. 2539.000)"
+    },
+    "grossMeasurementCbm": {
+      "type": "number",
+      "description": "container total gross measurement in cubic meters (e.g. 22.520)"
+    },
+    "freightTerms": {
+      "type": "string",
+      "description": "the freight payment terms as printed (e.g. 'OCEAN FREIGHT COLLECT')"
+    },
+    "serviceContractNumber": {
+      "type": "string",
+      "description": "the service contract number (e.g. 'LAX0056B22')"
+    },
+    "placeOfIssue": {
+      "type": "string",
+      "description": "the place where the bill was issued (e.g. 'SHENZHEN')"
+    },
+    "dateLadenOnBoard": {
+      "type": "string",
+      "format": "date",
+      "description": "the date cargo was laden on board in YYYY-MM-DD"
+    },
+    "dateIssued": {
+      "type": "string",
+      "format": "date",
+      "description": "the bill issue date in YYYY-MM-DD"
+    },
+    "cargoItems": {
+      "type": "array",
+      "description": "one entry per per-style cargo line in the description of goods",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "goodsDescription": {
+            "type": "string",
+            "description": "the fabric composition and garment description (e.g. \"LADIES' 90% COTTON 10% SPANDEX KNITTED DRESS\")"
+          },
+          "hsCode": {
+            "type": "string",
+            "description": "the HS / commodity code for the item if printed (e.g. '620349')"
+          },
+          "cartons": {
+            "type": "number",
+            "description": "number of cartons for this style (e.g. 92)"
+          },
+          "measurementCbm": {
+            "type": "number",
+            "description": "measurement in cubic meters for this style (e.g. 8.01)"
+          },
+          "weightKg": {
+            "type": "number",
+            "description": "gross weight in kilograms for this style (e.g. 1008)"
+          }
+        },
+        "required": [
+          "goodsDescription",
+          "cartons",
+          "measurementCbm",
+          "weightKg"
+        ]
+      }
+    }
+  },
+  "required": [
+    "carrier",
+    "seaWaybillNumber",
+    "shipperName",
+    "consigneeName",
+    "containerNumber",
+    "cartonsTotal",
+    "grossWeightKg",
+    "grossMeasurementCbm",
+    "cargoItems"
+  ]
+}

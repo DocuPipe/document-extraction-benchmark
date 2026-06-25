@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "PG&E Solar NEM Energy Statement",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "description": "the PG&E account number (e.g. '1023456789-0')"
+    },
+    "statementDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the statement date in YYYY-MM-DD"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the due date in YYYY-MM-DD"
+    },
+    "serviceAddress": {
+      "type": "string",
+      "description": "the service-for address (e.g. '1234 Main Street')"
+    },
+    "serviceAgreementId": {
+      "type": "string",
+      "description": "the service agreement ID (e.g. '9087654321')"
+    },
+    "rateSchedule": {
+      "type": "string",
+      "description": "the rate schedule (e.g. 'EV2A Home Charging')"
+    },
+    "previousUnpaidBalance": {
+      "type": "number",
+      "description": "the previous unpaid balance in dollars (e.g. 13.20)"
+    },
+    "currentElectricMonthlyCharges": {
+      "type": "number",
+      "description": "current electric monthly charges in dollars (e.g. 17.90)"
+    },
+    "totalAmountDue": {
+      "type": "number",
+      "description": "total amount due in dollars (e.g. 31.10)"
+    },
+    "ytdNemChargesBeforeTaxes": {
+      "type": "number",
+      "description": "year-to-date NEM charges before taxes in dollars, negative if a credit (e.g. -4.84)"
+    },
+    "totalElectricMinimumDeliveryCharges": {
+      "type": "number",
+      "description": "total electric minimum delivery charges in dollars (e.g. 17.62)"
+    },
+    "ytdEstimatedNemChargesAtTrueUp": {
+      "type": "number",
+      "description": "ytd estimated NEM charges at true-up in dollars (e.g. 0.00)"
+    },
+    "meterNumber": {
+      "type": "string",
+      "description": "the meter number (e.g. '1098765432')"
+    },
+    "meterImportsKwh": {
+      "type": "number",
+      "description": "metered imports in kWh (e.g. 13.376800)"
+    },
+    "meterExportsKwh": {
+      "type": "number",
+      "description": "metered exports in kWh, negative as printed (e.g. -19.828000)"
+    },
+    "meterNetUsageKwh": {
+      "type": "number",
+      "description": "metered net usage in kWh, negative if net export (e.g. -6.451200)"
+    },
+    "nemCharges": {
+      "type": "array",
+      "description": "one entry per bill-period row in the Summary of NEM Charges table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "billPeriodEndDate": {
+            "type": "string",
+            "format": "date",
+            "description": "the bill period end date in YYYY-MM-DD (e.g. 2026-02-15)"
+          },
+          "netUsageKwh": {
+            "type": "number",
+            "description": "net usage in kWh for the period, negative if net export (e.g. -6)"
+          },
+          "estimatedNemChargesBeforeTaxes": {
+            "type": "number",
+            "description": "estimated NEM charges before taxes in dollars, negative if a credit (e.g. -2.42)"
+          },
+          "estimatedTotalNemCharges": {
+            "type": "number",
+            "description": "estimated total NEM charges in dollars, negative if a credit (e.g. -2.55)"
+          }
+        },
+        "required": [
+          "billPeriodEndDate",
+          "netUsageKwh",
+          "estimatedNemChargesBeforeTaxes",
+          "estimatedTotalNemCharges"
+        ]
+      }
+    },
+    "monthlyChargeLines": {
+      "type": "array",
+      "description": "one entry per dated charge line in Details of Electric Monthly Charges",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "chargeType": {
+            "type": "string",
+            "description": "the charge label (e.g. 'Minimum Delivery Charge', 'Base Services Charge', 'San Jose Utility Users Tax')"
+          },
+          "days": {
+            "type": "number",
+            "description": "the number of billing days for the charge if printed (e.g. 13)"
+          },
+          "rate": {
+            "type": "number",
+            "description": "the per-day rate in dollars if printed (e.g. 0.39167)"
+          },
+          "amount": {
+            "type": "number",
+            "description": "the charge amount in dollars (e.g. 5.09)"
+          }
+        },
+        "required": [
+          "chargeType",
+          "amount"
+        ]
+      }
+    }
+  },
+  "required": [
+    "accountNumber",
+    "statementDate",
+    "totalAmountDue",
+    "ytdNemChargesBeforeTaxes",
+    "nemCharges",
+    "monthlyChargeLines"
+  ]
+}

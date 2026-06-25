@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "Purchase Order Detail",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "poNumber": {
+      "type": "string",
+      "description": "the purchase order number (e.g. '40418819')"
+    },
+    "department": {
+      "type": "string",
+      "description": "the department number (e.g. '6576')"
+    },
+    "poType": {
+      "type": "string",
+      "description": "the purchase order type (e.g. 'DO - Domestic Other')"
+    },
+    "buyer": {
+      "type": "string",
+      "description": "the buyer name / code as printed"
+    },
+    "orderDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the order date in YYYY-MM-DD"
+    },
+    "notBeforeDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the not-before date in YYYY-MM-DD"
+    },
+    "notAfterDate": {
+      "type": "string",
+      "format": "date",
+      "description": "the not-after date in YYYY-MM-DD"
+    },
+    "terms": {
+      "type": "string",
+      "description": "the payment terms as printed (e.g. '0200/DUEONRC+10')"
+    },
+    "shipTo": {
+      "type": "string",
+      "description": "the ship-to location (e.g. '050 NE - Omaha, Nebraska')"
+    },
+    "fobPoint": {
+      "type": "string",
+      "description": "the FOB point (e.g. 'DESTINATION')"
+    },
+    "lineItems": {
+      "type": "array",
+      "description": "one entry per product line item (main row, excluding pack-total sub-rows)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "vpn": {
+            "type": "string",
+            "description": "the vendor product number (VPN) (e.g. '381218')"
+          },
+          "style": {
+            "type": "string",
+            "description": "the style number (e.g. '25651275')"
+          },
+          "description": {
+            "type": "string",
+            "description": "the product description joined into one string (e.g. 'MILK CHOCOLATE TABLET BAR NO COLOR NO')"
+          },
+          "sku": {
+            "type": "string",
+            "description": "the SKU (e.g. '25651276')"
+          },
+          "upc": {
+            "type": "string",
+            "description": "the UPC code (e.g. '040000539551')"
+          },
+          "packQty": {
+            "type": "number",
+            "description": "the pack quantity from the PACK QTY column; this column is blank on the main rows so output null when absent"
+          },
+          "content": {
+            "type": "number",
+            "description": "the content quantity from the CONTENT column (inner pack count, e.g. 12); this is NOT the UNIT QTY column"
+          },
+          "unitCost": {
+            "type": "number",
+            "description": "the unit cost in dollars (e.g. 1.37)"
+          },
+          "extendedCost": {
+            "type": "number",
+            "description": "the extended cost in dollars (e.g. 1150.80)"
+          }
+        },
+        "required": [
+          "vpn",
+          "style",
+          "description",
+          "unitCost",
+          "extendedCost"
+        ]
+      }
+    }
+  },
+  "required": [
+    "poNumber",
+    "lineItems"
+  ]
+}

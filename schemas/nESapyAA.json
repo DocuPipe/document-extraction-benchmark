@@ -1,0 +1,127 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "documentType": {
+      "type": "string",
+      "description": "Type of document as printed in the header",
+      "enum": [
+        "חשבונית מס",
+        "חשבונית מס / קבלה",
+        "קבלה",
+        "חשבונית"
+      ]
+    },
+    "documentNumber": {
+      "type": "string",
+      "description": "Invoice or receipt number printed in the title line"
+    },
+    "issueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the invoice was issued"
+    },
+    "vendorName": {
+      "type": "string",
+      "description": "Name of the issuing business"
+    },
+    "vendorTaxId": {
+      "type": "string",
+      "description": "Issuing business registration number (ח.פ / עוסק מורשה)"
+    },
+    "customerName": {
+      "type": "string",
+      "description": "Name of the recipient the invoice is addressed to (לכבוד)"
+    },
+    "customerAddress": {
+      "type": "string",
+      "description": "Postal address of the recipient"
+    },
+    "customerTaxId": {
+      "type": "string",
+      "description": "Recipient identification number (ח.פ/ת.ז)"
+    },
+    "subscriptionPlan": {
+      "type": "string",
+      "description": "Name of the subscribed plan shown under the title, if any"
+    },
+    "subtotalBeforeVat": {
+      "type": "number",
+      "description": "Sum before VAT in NIS (סה\"כ before מע\"מ)"
+    },
+    "vatRatePercent": {
+      "type": "number",
+      "description": "VAT rate applied, in percent"
+    },
+    "vatAmount": {
+      "type": "number",
+      "description": "VAT amount in NIS (מע\"מ)"
+    },
+    "totalAmount": {
+      "type": "number",
+      "description": "Final total payable in NIS (סה\"כ לתשלום)"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency of the monetary amounts",
+      "enum": [
+        "NIS",
+        "USD",
+        "EUR"
+      ]
+    },
+    "lineItems": {
+      "type": "array",
+      "description": "Billed line items in the invoice table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Line item description (פירוט)"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "Quantity billed (כמות)"
+          },
+          "unitPrice": {
+            "type": "number",
+            "description": "Unit price in NIS (מחיר)"
+          },
+          "lineTotal": {
+            "type": "number",
+            "description": "Line total in NIS (סה\"כ)"
+          }
+        }
+      }
+    },
+    "payments": {
+      "type": "array",
+      "description": "Payment detail rows in the payments table (פרטי תשלומים)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "paymentMethod": {
+            "type": "string",
+            "description": "Payment method (אמצעי תשלום), e.g. credit card / bank transfer"
+          },
+          "paymentDescription": {
+            "type": "string",
+            "description": "Payment detail text (פירוט), e.g. card type and transaction type"
+          },
+          "paymentDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of the payment (תאריך)"
+          },
+          "paymentAmount": {
+            "type": "number",
+            "description": "Payment amount in NIS (סכום)"
+          }
+        }
+      }
+    }
+  }
+}

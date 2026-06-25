@@ -1,0 +1,131 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "merchantName": {
+      "type": "string",
+      "description": "restaurant brand name on the receipt"
+    },
+    "storeNumber": {
+      "type": "string",
+      "description": "store identifier such as CA-1661"
+    },
+    "storeStreetAddress": {
+      "type": "string",
+      "description": "store street address line"
+    },
+    "storeCity": {
+      "type": "string",
+      "description": "store city"
+    },
+    "storeState": {
+      "type": "string",
+      "description": "store state abbreviation"
+    },
+    "storeZip": {
+      "type": "string",
+      "description": "store postal code"
+    },
+    "storePhone": {
+      "type": "string",
+      "description": "store phone number as printed"
+    },
+    "transactionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "transaction date in YYYY-MM-DD"
+    },
+    "transactionTime": {
+      "type": "string",
+      "description": "transaction time as printed, e.g. 1:00:17 PM"
+    },
+    "orderId": {
+      "type": "string",
+      "description": "order id printed on the receipt"
+    },
+    "registerOrTerminal": {
+      "type": "string",
+      "description": "register/terminal label, e.g. 47 - FIVE GUYS"
+    },
+    "employeeName": {
+      "type": "string",
+      "description": "employee name printed on the receipt"
+    },
+    "lineItems": {
+      "type": "array",
+      "description": "every printed order line, including free $0.00 toppings/modifiers",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "type": "number",
+            "description": "quantity printed at start of line; 1 if none printed"
+          },
+          "description": {
+            "type": "string",
+            "description": "item or modifier name as printed"
+          },
+          "unitPrice": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "per-unit price if printed in parentheses, else null"
+          },
+          "lineTotal": {
+            "type": "number",
+            "description": "dollar amount printed at the right of the line"
+          },
+          "isModifier": {
+            "type": "boolean",
+            "description": "true if this is a topping/modifier attached to the item above it"
+          }
+        },
+        "required": [
+          "quantity",
+          "description",
+          "lineTotal",
+          "isModifier"
+        ]
+      }
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "sub total amount before tax"
+    },
+    "salesTax": {
+      "type": "number",
+      "description": "sales tax amount"
+    },
+    "orderTotal": {
+      "type": "number",
+      "description": "order total amount including tax"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "description": "payment method/card brand, e.g. MasterCard"
+    },
+    "cardLastFour": {
+      "type": "string",
+      "description": "last four digits of the payment card"
+    },
+    "authorizationCode": {
+      "type": "string",
+      "description": "payment authorization code"
+    },
+    "amountPaid": {
+      "type": "number",
+      "description": "amount charged to the payment method"
+    }
+  },
+  "required": [
+    "merchantName",
+    "transactionDate",
+    "lineItems",
+    "subtotal",
+    "salesTax",
+    "orderTotal",
+    "amountPaid"
+  ]
+}

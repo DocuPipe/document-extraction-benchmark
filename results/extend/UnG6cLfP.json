@@ -1,0 +1,52 @@
+{
+  "score": 0.9131313131313131,
+  "cost": 0.125,
+  "time_sec": 18.393,
+  "num_pages": 2,
+  "data": {
+    "checkDate": null,
+    "lineItems": [
+      {
+        "btu": null,
+        "state": "TX",
+        "ownerTax": 236.2,
+        "unitPrice": 102.464,
+        "countyName": "Orange",
+        "ownerVolume": 37.82,
+        "productCode": "1",
+        "interestType": "WI",
+        "ownerDeducts": 0,
+        "propertyName": "ALEXANDER NO 3 OIL UNIT #3",
+        "ownerNetValue": 3638.41,
+        "propertyNumber": "046907",
+        "salesMonthYear": "06/2013",
+        "decimalInterest": 0.00494707,
+        "ownerGrossValue": 3874.61
+      },
+      {
+        "btu": 1.301,
+        "state": "TX",
+        "ownerTax": 46.74,
+        "unitPrice": 1.301,
+        "countyName": "Orange",
+        "ownerVolume": 66.11,
+        "productCode": "2",
+        "interestType": "WI",
+        "ownerDeducts": 13.05,
+        "propertyName": "ALEXANDER NO 3 OIL UNIT #3",
+        "ownerNetValue": 423.93,
+        "propertyNumber": "046907",
+        "salesMonthYear": "06/2013",
+        "decimalInterest": 0.00494707,
+        "ownerGrossValue": 515.65
+      }
+    ],
+    "checkNumber": null,
+    "ownerNumber": null,
+    "operatorName": "Samson Exploration, LLC",
+    "ownerTotalTax": 282.94,
+    "ownerTotalDeducts": 44.98,
+    "ownerTotalNetValue": 4062.34,
+    "ownerTotalGrossValue": 4390.26
+  }
+}

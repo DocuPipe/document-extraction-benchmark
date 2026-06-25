@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "currency": {
+      "type": "string",
+      "description": "currency code from the export metadata block"
+    },
+    "recordCount": {
+      "type": "integer",
+      "description": "the record_count value stated in the export metadata block (read it; do not count)"
+    },
+    "sourceSystem": {
+      "type": "string",
+      "description": "the source_system value from the export metadata block"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "description": "the schema_version value from the export metadata block"
+    },
+    "focusOrderDate": {
+      "type": "string",
+      "description": "date part (YYYY-MM-DD) of placed_on for the order whose order_ref is ORD-10134"
+    },
+    "focusOrderChannel": {
+      "type": "string",
+      "description": "channel of order ORD-10134"
+    },
+    "focusOrderStatus": {
+      "type": "string",
+      "description": "fulfillment_status of order ORD-10134"
+    },
+    "focusOrderBuyerName": {
+      "type": "string",
+      "description": "buyer display_name of order ORD-10134"
+    },
+    "focusOrderBuyerTier": {
+      "type": "string",
+      "description": "buyer tier of order ORD-10134"
+    },
+    "focusOrderBuyerRegion": {
+      "type": "string",
+      "description": "buyer region of order ORD-10134"
+    },
+    "focusOrderShippingCarrier": {
+      "type": "string",
+      "description": "shipping carrier of order ORD-10134"
+    },
+    "focusOrderPaymentMethod": {
+      "type": "string",
+      "description": "payment method of order ORD-10134"
+    },
+    "focusOrderLineItems": {
+      "type": "array",
+      "description": "the line items of order ORD-10134, one object per element of its lines array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sku": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "the qty value"
+          },
+          "unitPriceCents": {
+            "type": "integer",
+            "description": "the unit_price_cents value"
+          },
+          "discountCents": {
+            "type": "integer",
+            "description": "the discount_cents value"
+          }
+        },
+        "required": [
+          "sku",
+          "title",
+          "category",
+          "quantity",
+          "unitPriceCents",
+          "discountCents"
+        ]
+      }
+    },
+    "earlyOrderCarrier": {
+      "type": "string",
+      "description": "shipping carrier of the order whose order_ref is ORD-10019"
+    },
+    "lateOrderPaymentMethod": {
+      "type": "string",
+      "description": "payment method of the order whose order_ref is ORD-10193"
+    }
+  },
+  "required": [
+    "currency",
+    "recordCount",
+    "sourceSystem",
+    "schemaVersion",
+    "focusOrderDate",
+    "focusOrderChannel",
+    "focusOrderStatus",
+    "focusOrderBuyerName",
+    "focusOrderBuyerTier",
+    "focusOrderBuyerRegion",
+    "focusOrderShippingCarrier",
+    "focusOrderPaymentMethod",
+    "focusOrderLineItems",
+    "earlyOrderCarrier",
+    "lateOrderPaymentMethod"
+  ]
+}

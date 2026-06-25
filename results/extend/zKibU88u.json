@@ -1,0 +1,64 @@
+{
+  "score": 1.0,
+  "cost": 0.675,
+  "time_sec": 27.001,
+  "num_pages": 75,
+  "data": {
+    "currency": "USD",
+    "recordCount": 200,
+    "sourceSystem": "commerce-cloud-v4",
+    "schemaVersion": "orders.v4",
+    "focusOrderDate": "2025-10-27",
+    "focusOrderStatus": "shipped",
+    "earlyOrderCarrier": "USPS",
+    "focusOrderChannel": "store",
+    "focusOrderBuyerName": "Devon Marsh",
+    "focusOrderBuyerTier": "silver",
+    "focusOrderLineItems": [
+      {
+        "sku": "SKU-SF-610",
+        "title": "Halden 3-Seat Sofa",
+        "category": "Seating",
+        "quantity": 4,
+        "discountCents": 1500,
+        "unitPriceCents": 129900
+      },
+      {
+        "sku": "SKU-SH-810",
+        "title": "Atlas Bookshelf",
+        "category": "Storage",
+        "quantity": 1,
+        "discountCents": 0,
+        "unitPriceCents": 33900
+      },
+      {
+        "sku": "SKU-SF-690",
+        "title": "Otis Loveseat",
+        "category": "Seating",
+        "quantity": 1,
+        "discountCents": 1000,
+        "unitPriceCents": 89900
+      },
+      {
+        "sku": "SKU-AP-205",
+        "title": "Nimbus Floor Lamp",
+        "category": "Lighting",
+        "quantity": 2,
+        "discountCents": 1500,
+        "unitPriceCents": 15900
+      },
+      {
+        "sku": "SKU-CH-340",
+        "title": "Marlow Lounge Chair",
+        "category": "Seating",
+        "quantity": 1,
+        "discountCents": 0,
+        "unitPriceCents": 38900
+      }
+    ],
+    "focusOrderBuyerRegion": "WEST",
+    "lateOrderPaymentMethod": "mastercard",
+    "focusOrderPaymentMethod": "paypal",
+    "focusOrderShippingCarrier": "DHL"
+  }
+}

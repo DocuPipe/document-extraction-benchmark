@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "An Italian monthly payslip (busta paga / cedolino) showing employee/employer header fields, a VOCE/DESCRIZIONE table of pay and deduction lines, and the gross/net totals.",
+  "properties": {
+    "employeeName": {
+      "type": "string",
+      "description": "The employee name as printed in the COGNOME E NOME field, without the employee code."
+    },
+    "employerName": {
+      "type": "string",
+      "description": "The employer / company name as printed in the DITTA header field."
+    },
+    "codiceFiscale": {
+      "type": "string",
+      "description": "The employee tax code (CODICE FISCALE) exactly as printed."
+    },
+    "payPeriod": {
+      "type": "string",
+      "description": "The pay period (MESE DI RETRIBUZIONE) exactly as printed, e.g. month and year."
+    },
+    "payLines": {
+      "type": "array",
+      "description": "One object per printed row of the VOCE/DESCRIZIONE table; each row has a code and an Italian description, and may carry an earning (COMPETENZE) and/or a deduction (TRATTENUTE) amount.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "voce": {
+            "type": "string",
+            "description": "The VOCE code printed at the start of the row, kept exactly as printed."
+          },
+          "description": {
+            "type": "string",
+            "description": "The DESCRIZIONE label of the row exactly as printed in Italian; this is the matching key for the row."
+          },
+          "unitaDiMisura": {
+            "type": "string",
+            "description": "The unit of measure (Unita' di misura) for the row exactly as printed, or null when blank."
+          },
+          "quantita": {
+            "type": "number",
+            "description": "The Quantita' column value for the row as a number, or null when blank."
+          },
+          "base": {
+            "type": "number",
+            "description": "The Base column value for the row as a number, or null when blank."
+          },
+          "trattenute": {
+            "type": "number",
+            "description": "The deduction amount in the TRATTENUTE column for the row as a number, or null when there is no deduction on this row."
+          },
+          "competenze": {
+            "type": "number",
+            "description": "The earning amount in the COMPETENZE column for the row as a number, or null when there is no earning on this row."
+          }
+        }
+      }
+    },
+    "totaleCompetenze": {
+      "type": "number",
+      "description": "The total earnings (TOTALE COMPETENZE) as a number without separators."
+    },
+    "totaleTrattenute": {
+      "type": "number",
+      "description": "The total deductions (TOTALE TRATTENUTE) as a number without separators."
+    },
+    "nettoInBusta": {
+      "type": "number",
+      "description": "The net pay (NETTO IN BUSTA) as a number without separators."
+    }
+  }
+}

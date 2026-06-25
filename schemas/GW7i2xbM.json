@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "insurerName": {
+      "type": "string",
+      "description": "insurance company name"
+    },
+    "policyNumber": {
+      "type": "string",
+      "description": "policy number"
+    },
+    "policyForm": {
+      "type": "string",
+      "description": "policy form code (e.g. HO-3)"
+    },
+    "policyEffectiveDate": {
+      "type": "string",
+      "format": "date",
+      "description": "policy effective (start) date"
+    },
+    "policyExpirationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "policy expiration (end) date"
+    },
+    "insuredName": {
+      "type": "string",
+      "description": "named insured(s)"
+    },
+    "insuredAddress": {
+      "type": "string",
+      "description": "insured property/mailing address on one line"
+    },
+    "totalAnnualPremium": {
+      "type": "number",
+      "description": "total annual policy premium"
+    },
+    "hurricanePremium": {
+      "type": "number",
+      "description": "hurricane portion of premium"
+    },
+    "nonHurricanePremium": {
+      "type": "number",
+      "description": "non-hurricane portion of premium"
+    },
+    "allOtherPerilsDeductible": {
+      "type": "number",
+      "description": "all other perils deductible amount"
+    },
+    "hurricaneDeductiblePercentOfCoverageA": {
+      "type": "number",
+      "description": "hurricane deductible as percent of Coverage A (e.g. 2)"
+    },
+    "hurricaneDeductibleAmount": {
+      "type": "number",
+      "description": "hurricane deductible dollar amount"
+    },
+    "coverages": {
+      "type": "array",
+      "description": "section I and II coverage lines (Coverage A through F)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "coverageLetter": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "description": "coverage letter"
+          },
+          "coverageName": {
+            "type": "string",
+            "description": "coverage name (e.g. Dwelling)"
+          },
+          "limitOfLiability": {
+            "type": "number",
+            "description": "limit of liability dollar amount"
+          }
+        },
+        "required": [
+          "coverageLetter",
+          "coverageName",
+          "limitOfLiability"
+        ]
+      }
+    }
+  },
+  "required": [
+    "insurerName",
+    "policyNumber",
+    "policyForm",
+    "policyEffectiveDate",
+    "totalAnnualPremium",
+    "hurricanePremium",
+    "nonHurricanePremium",
+    "hurricaneDeductiblePercentOfCoverageA",
+    "hurricaneDeductibleAmount",
+    "coverages"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "score": 0.8484848484848485,
+  "cost": 0.25,
+  "time_sec": 23.835,
+  "num_pages": 4,
+  "data": {
+    "dueDate": "2026-04-06",
+    "nemCharges": [
+      {
+        "netUsageKwh": -6,
+        "billPeriodEndDate": "2026-02-15",
+        "estimatedTotalNemCharges": -2.55,
+        "estimatedNemChargesBeforeTaxes": -2.42
+      },
+      {
+        "netUsageKwh": -6,
+        "billPeriodEndDate": "2026-03-15",
+        "estimatedTotalNemCharges": -2.55,
+        "estimatedNemChargesBeforeTaxes": -2.42
+      },
+      {
+        "netUsageKwh": -12,
+        "billPeriodEndDate": null,
+        "estimatedTotalNemCharges": -5.1,
+        "estimatedNemChargesBeforeTaxes": -4.84
+      }
+    ],
+    "meterNumber": "1098765432",
+    "rateSchedule": "EV2A Home Charging",
+    "accountNumber": "1023456789-0",
+    "statementDate": "2026-03-15",
+    "serviceAddress": "1234 MAIN STREET",
+    "totalAmountDue": 31.1,
+    "meterExportsKwh": -19.828,
+    "meterImportsKwh": 13.3768,
+    "meterNetUsageKwh": -6.4512,
+    "monthlyChargeLines": [
+      {
+        "days": 13,
+        "rate": 0.39167,
+        "amount": 5.09,
+        "chargeType": "Minimum Delivery Charge"
+      },
+      {
+        "days": null,
+        "rate": null,
+        "amount": 0.25,
+        "chargeType": "San Jose Utility Users' Tax"
+      },
+      {
+        "days": null,
+        "rate": null,
+        "amount": 0.02,
+        "chargeType": "San Jose Franchise Surcharge"
+      },
+      {
+        "days": 15,
+        "rate": 0.7935,
+        "amount": 11.9,
+        "chargeType": "Base Services Charge"
+      },
+      {
+        "days": null,
+        "rate": null,
+        "amount": 0.6,
+        "chargeType": "San Jose Utility Users' Tax"
+      },
+      {
+        "days": null,
+        "rate": null,
+        "amount": 0.04,
+        "chargeType": "San Jose Franchise Surcharge"
+      }
+    ],
+    "serviceAgreementId": "9087654321",
+    "previousUnpaidBalance": 13.2,
+    "ytdNemChargesBeforeTaxes": -4.84,
+    "currentElectricMonthlyCharges": 17.9,
+    "ytdEstimatedNemChargesAtTrueUp": 0,
+    "totalElectricMinimumDeliveryCharges": 17.62
+  }
+}

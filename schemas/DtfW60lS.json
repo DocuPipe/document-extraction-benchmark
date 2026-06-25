@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "spanish residential electricity invoice (factura de electricidad) with a billing-summary charge breakdown (resumen de facturacion) that reconciles to the total a pagar. extract values exactly as printed; convert decimal commas to numeric dots (80,95 -> 80.95).",
+  "properties": {
+    "numeroFactura": {
+      "type": "string",
+      "description": "the invoice number as printed under numero de factura."
+    },
+    "cups": {
+      "type": "string",
+      "description": "the supply point identification code (CUPS) exactly as printed, including spaces."
+    },
+    "periodoFacturacionStart": {
+      "type": "string",
+      "description": "start date of the billing period (periodo de facturacion) in YYYY-MM-DD format."
+    },
+    "periodoFacturacionEnd": {
+      "type": "string",
+      "description": "end date of the billing period (periodo de facturacion) in YYYY-MM-DD format."
+    },
+    "consumoKwh": {
+      "type": "number",
+      "description": "total metered electricity consumption in kWh for the period."
+    },
+    "charges": {
+      "type": "array",
+      "description": "the resumen de facturacion charge lines, each a spanish charge label and its amount in euros. exclude the total/summary row (total a pagar).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "the spanish charge label exactly as printed on the line."
+          },
+          "amount": {
+            "type": "number",
+            "description": "the charge amount in euros as a number, decimal comma converted to dot, no currency symbol."
+          }
+        }
+      }
+    },
+    "baseImponible": {
+      "type": "number",
+      "description": "the taxable base (importe total before IVA) in euros as a number."
+    },
+    "iva": {
+      "type": "number",
+      "description": "the IVA (VAT) amount in euros as a number."
+    },
+    "totalAPagar": {
+      "type": "number",
+      "description": "the total amount due (total a pagar) in euros as a number, equal to the sum of the charge lines."
+    }
+  }
+}

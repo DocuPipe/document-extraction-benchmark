@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "accountSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "computed roll-up over the whole register",
+      "properties": {
+        "openingBalance": {
+          "type": "number",
+          "description": "account balance immediately before the first transaction (the first transaction's running balance minus that transaction's amount)"
+        },
+        "closingBalance": {
+          "type": "number",
+          "description": "running balance after the final transaction"
+        },
+        "totalDebits": {
+          "type": "number",
+          "description": "sum of all debit (negative) amounts, expressed as a positive number"
+        },
+        "totalCredits": {
+          "type": "number",
+          "description": "sum of all credit (positive) amounts"
+        },
+        "feeTransactionCount": {
+          "type": "integer",
+          "description": "count of transactions whose category is Fees"
+        }
+      },
+      "required": [
+        "openingBalance",
+        "closingBalance",
+        "totalDebits",
+        "totalCredits",
+        "feeTransactionCount"
+      ]
+    },
+    "largeDebits": {
+      "type": "array",
+      "description": "only debit transactions of 100.00 or more in absolute value (amount of -100.00 or lower); exclude all credits and all debits smaller than 100.00",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "postedOn": {
+            "type": "string",
+            "description": "posting date of the transaction, YYYY-MM-DD"
+          },
+          "merchant": {
+            "type": "string",
+            "description": "transaction description / counterparty, exactly as written"
+          },
+          "spendCategory": {
+            "type": "string",
+            "description": "category label of the transaction"
+          },
+          "debitAmountUsd": {
+            "type": "number",
+            "description": "the debit amount as a positive number (drop the leading minus sign)"
+          },
+          "valueDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "the separate value/settlement date only if the register has its own value-date column distinct from the posting date; if there is no such column, null. never reuse the posting date as the value date"
+          }
+        },
+        "required": [
+          "postedOn",
+          "merchant",
+          "spendCategory",
+          "debitAmountUsd"
+        ]
+      }
+    },
+    "highestRunningBalanceDescription": {
+      "type": "string",
+      "description": "description of the single transaction at which the running balance reaches its highest value anywhere in the register"
+    }
+  },
+  "required": [
+    "accountSummary",
+    "largeDebits",
+    "highestRunningBalanceDescription"
+  ]
+}

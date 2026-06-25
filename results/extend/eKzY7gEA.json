@@ -1,0 +1,72 @@
+{
+  "score": 1.0,
+  "cost": 0.07500000000000001,
+  "time_sec": 4.824,
+  "num_pages": 1,
+  "data": {
+    "mrn": "00471829",
+    "sex": "Male",
+    "allergies": [
+      {
+        "allergy": "Penicillin (rash)"
+      },
+      {
+        "allergy": "Sulfonamides (hives)"
+      }
+    ],
+    "dateOfBirth": "1958-03-14",
+    "disposition": "Home with home health",
+    "patientName": "Robert J. Sample",
+    "admissionDate": "2025-09-02",
+    "dischargeDate": "2025-09-08",
+    "attendingPhysician": "Dr. Elena Marsh, MD",
+    "dischargeDiagnoses": [
+      {
+        "diagnosis": "Community-acquired pneumonia, right lower lobe"
+      },
+      {
+        "diagnosis": "Acute hypoxic respiratory failure"
+      },
+      {
+        "diagnosis": "Type 2 diabetes mellitus"
+      },
+      {
+        "diagnosis": "Essential hypertension"
+      },
+      {
+        "diagnosis": "Chronic kidney disease, stage 3"
+      }
+    ],
+    "proceduresPerformed": [
+      {
+        "procedure": "Chest radiograph, two views"
+      },
+      {
+        "procedure": "Complete blood count"
+      },
+      {
+        "procedure": "Comprehensive metabolic panel"
+      },
+      {
+        "procedure": "Blood cultures x2"
+      }
+    ],
+    "dischargeMedications": [
+      {
+        "medication": "Levofloxacin 750 mg PO daily x5 days"
+      },
+      {
+        "medication": "Metformin 1000 mg PO twice daily"
+      },
+      {
+        "medication": "Lisinopril 20 mg PO daily"
+      },
+      {
+        "medication": "Atorvastatin 40 mg PO at bedtime"
+      },
+      {
+        "medication": "Albuterol inhaler 2 puffs every 4 hours as needed"
+      }
+    ]
+  }
+}

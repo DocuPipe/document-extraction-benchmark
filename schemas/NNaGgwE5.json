@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "seriesOrComponentName": {
+      "type": "string",
+      "description": "Soil series or component name from the header"
+    },
+    "mapUnitSymbol": {
+      "type": "string",
+      "description": "Map unit symbol from the header"
+    },
+    "classification": {
+      "type": "string",
+      "description": "Soil taxonomic classification from the header"
+    },
+    "describers": {
+      "type": "string",
+      "description": "Describer initials or names from the Describer(s) field"
+    },
+    "date": {
+      "type": "string",
+      "description": "Date of description as printed on the form"
+    },
+    "weather": {
+      "type": "string",
+      "description": "Weather noted on the form"
+    },
+    "airTemperature": {
+      "type": "string",
+      "description": "Air temperature as printed, including unit"
+    },
+    "latitude": {
+      "type": "string",
+      "description": "Latitude as printed on the form"
+    },
+    "longitude": {
+      "type": "string",
+      "description": "Longitude as printed on the form"
+    },
+    "datum": {
+      "type": "string",
+      "description": "Geodetic datum from the Datum field"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location description from the Location field"
+    },
+    "county": {
+      "type": "string",
+      "description": "County from the header"
+    },
+    "landscape": {
+      "type": "string",
+      "description": "Landscape from the header"
+    },
+    "landform": {
+      "type": "string",
+      "description": "Landform from the header"
+    },
+    "elevation": {
+      "type": "string",
+      "description": "Elevation as printed on the form"
+    },
+    "aspect": {
+      "type": "string",
+      "description": "Aspect as printed on the form"
+    },
+    "slopePercent": {
+      "type": "string",
+      "description": "Slope percent as printed on the form"
+    },
+    "drainage": {
+      "type": "string",
+      "description": "Drainage class from the Drainage field"
+    },
+    "parentMaterial": {
+      "type": "string",
+      "description": "Parent material description from the header"
+    },
+    "landCoverUse": {
+      "type": "string",
+      "description": "Land cover or use from the header"
+    },
+    "soilHorizons": {
+      "type": "array",
+      "description": "Rows of the handwritten soil horizon description table",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "observationMethod": {
+            "type": "string",
+            "description": "Observation method code (e.g. LP, SP)"
+          },
+          "depth": {
+            "type": "string",
+            "description": "Depth range of the horizon in inches as printed (e.g. 0 - 20)"
+          },
+          "horizon": {
+            "type": "string",
+            "description": "Horizon designation code (e.g. Ap, A, Bt1)"
+          },
+          "boundary": {
+            "type": "string",
+            "description": "Horizon boundary code (e.g. AS, CW, GW, AW, DW, DI)"
+          },
+          "matrixColorDry": {
+            "type": "string",
+            "description": "Dry matrix Munsell color notation"
+          },
+          "matrixColorMoist": {
+            "type": "string",
+            "description": "Moist matrix Munsell color notation"
+          },
+          "texture": {
+            "type": "string",
+            "description": "Soil texture class as printed (e.g. sil, sicl, cl)"
+          }
+        }
+      }
+    }
+  }
+}

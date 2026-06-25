@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "patientName": {
+      "type": "string"
+    },
+    "mrn": {
+      "type": "string",
+      "description": "medical record number"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "description": "date of birth, YYYY-MM-DD"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "admissionDate": {
+      "type": "string",
+      "description": "YYYY-MM-DD"
+    },
+    "dischargeDate": {
+      "type": "string",
+      "description": "YYYY-MM-DD"
+    },
+    "attendingPhysician": {
+      "type": "string"
+    },
+    "disposition": {
+      "type": "string"
+    },
+    "dischargeDiagnoses": {
+      "type": "array",
+      "description": "each discharge diagnosis as listed, one string per item",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "diagnosis": {
+            "type": "string",
+            "description": "the diagnosis text, exactly as listed (one per item; exclude any leading list number/bullet)"
+          }
+        },
+        "required": [
+          "diagnosis"
+        ]
+      }
+    },
+    "allergies": {
+      "type": "array",
+      "description": "each allergy as listed, one string per item",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy": {
+            "type": "string",
+            "description": "the allergy text, exactly as listed (one per item; exclude any leading list number/bullet)"
+          }
+        },
+        "required": [
+          "allergy"
+        ]
+      }
+    },
+    "proceduresPerformed": {
+      "type": "array",
+      "description": "each procedure as listed, one string per item",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "procedure": {
+            "type": "string",
+            "description": "the procedure text, exactly as listed (one per item; exclude any leading list number/bullet)"
+          }
+        },
+        "required": [
+          "procedure"
+        ]
+      }
+    },
+    "dischargeMedications": {
+      "type": "array",
+      "description": "each discharge medication line as listed, one string per item",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "medication": {
+            "type": "string",
+            "description": "the medication text, exactly as listed (one per item; exclude any leading list number/bullet)"
+          }
+        },
+        "required": [
+          "medication"
+        ]
+      }
+    }
+  },
+  "required": [
+    "patientName",
+    "mrn",
+    "dateOfBirth",
+    "sex",
+    "admissionDate",
+    "dischargeDate",
+    "attendingPhysician",
+    "disposition",
+    "dischargeDiagnoses",
+    "allergies",
+    "proceduresPerformed",
+    "dischargeMedications"
+  ]
+}

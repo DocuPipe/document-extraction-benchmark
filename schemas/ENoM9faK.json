@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "drawingTitle": {
+      "type": "string",
+      "description": "title in the drawing's TITLE box of the title block; do not use the page header/footer or the List of Material top row; null if the TITLE box is blank"
+    },
+    "drawingNumber": {
+      "type": "string",
+      "description": "drawing/document number in the title block's drawing-number box; do not use the manual's footer publication number or a part number; null if not printed in the title block"
+    },
+    "revision": {
+      "type": "string",
+      "description": "revision identifier from the title block's revision block; do not use any revision in the page header/footer; null if the revision block is empty"
+    },
+    "organization": {
+      "type": "string",
+      "description": "Issuing organization or facility named in the title block"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location of the issuing facility"
+    },
+    "listOfMaterial": {
+      "type": "array",
+      "description": "Rows of the List of Material table on the drawing",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "itemNo": {
+            "type": "string",
+            "description": "Item or find number from the ITEM NO. column"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Quantity required for this item"
+          },
+          "partNo": {
+            "type": "string",
+            "description": "Part number from the PART NO column"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the part"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material called out for this part"
+          }
+        }
+      }
+    }
+  }
+}

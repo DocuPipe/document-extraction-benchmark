@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "payPeriodMonth": {
+      "type": "integer",
+      "description": "Pay period month number (חודש)"
+    },
+    "payPeriodYear": {
+      "type": "integer",
+      "description": "Pay period year (שנה)"
+    },
+    "grade": {
+      "type": "string",
+      "description": "Employee grade or rank (דרגה)"
+    },
+    "totalPayments": {
+      "type": "number",
+      "description": "Sum of all gross payments (סה\"כ תשלומים)"
+    },
+    "totalDeductions": {
+      "type": "number",
+      "description": "Sum of all deductions (סה\"כ ניכויים)"
+    },
+    "netToBank": {
+      "type": "number",
+      "description": "Net amount paid to bank (סכום בבנק)"
+    },
+    "totalHours": {
+      "type": "number",
+      "description": "Total worked hours for the period (שעות)"
+    },
+    "payments": {
+      "type": "array",
+      "description": "Gross payment line items in the payments table (תשלומים)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Payment component description (תאור)"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Payment amount in NIS (סכום תשלום)"
+          },
+          "difference": {
+            "type": "number",
+            "description": "Difference column value if present (הפרש)"
+          }
+        }
+      }
+    },
+    "deductions": {
+      "type": "array",
+      "description": "Deduction line items in the deductions table (ניכויים)",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Deduction component description (תאור)"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Deduction amount in NIS (סכום ניכוי)"
+          },
+          "difference": {
+            "type": "number",
+            "description": "Difference column value if present (הפרש)"
+          }
+        }
+      }
+    }
+  }
+}
