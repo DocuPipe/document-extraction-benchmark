@@ -4,7 +4,7 @@ A public, reproducible head-to-head benchmark for document data extraction, buil
 
 This repository contains everything needed to inspect and rerun the benchmark: the source documents, the schemas, the hand-verified ground-truth labels, both engines' raw extraction output, the scorer, and a full source manifest ([SOURCES.md](SOURCES.md)).
 
-Full write-up: **[We tied Extend on the easy benchmark; the hard documents told a different story](https://www.docupipe.ai/blog/docupipe-vs-extend-benchmark)**.
+Full write-up: **[DocuPipe vs Extend on 50 hard, real-world documents](https://www.docupipe.ai/blog/docupipe-vs-extend-benchmark)**.
 
 ## Results
 
@@ -18,7 +18,7 @@ Full write-up: **[We tied Extend on the easy benchmark; the hard documents told 
 
 On clean, simple documents both systems often reach 100%. The gap opens on structural cases: multilingual and right-to-left documents, array-heavy statements, multipage context, and non-PDF file types. Per-document scores are in [`results/summary.json`](results/summary.json).
 
-For context, on Extend's own flat, single-page [RealDoc-Bench](https://www.extend.ai/resources/realdocbench) QA set the two systems were effectively tied (DocuPipe 95.31% vs Extend's best configuration 95.15%). That benchmark is not reproduced here because its documents and answer key are published separately by Extend; this repository is the harder structural benchmark we built. The blog post covers both.
+For context, on Extend's own flat, single-page [RealDoc-Bench](https://www.extend.ai/resources/realdocbench) QA set DocuPipe came out narrowly ahead (95.31% vs Extend's best configuration 95.15%). That benchmark is not reproduced here because its documents and answer key are published separately by Extend; this repository is the harder structural benchmark we built. The blog post covers both.
 
 ## What is in the benchmark
 
