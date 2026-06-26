@@ -17,6 +17,7 @@ never recomputes them. Run it from anywhere after regenerating the report:
 from __future__ import annotations
 
 import json
+import math
 from json import JSONDecoder
 from pathlib import Path
 from typing import Any
@@ -77,7 +78,7 @@ def engine_model(engine: str, doc_ids: list[str]) -> str | None:
 
 def mean(values: list[float]) -> float | None:
     values = [v for v in values if v is not None]
-    return sum(values) / len(values) if values else None
+    return math.fsum(values) / len(values) if values else None
 
 
 def build() -> dict[str, Any]:

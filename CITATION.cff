@@ -3,7 +3,10 @@ title: "DocuBench"
 message: "If you use DocuBench, please cite this repository."
 type: dataset
 authors:
-  - name: "DocuBench maintainers"
+  - family-names: "Merhav"
+    given-names: "Uri"
+  - family-names: "Dean"
+    given-names: "Nitai"
 repository-code: "https://github.com/DocuPipe/docubench"
 abstract: "A public benchmark for schema-guided structured extraction from real-world documents."
 keywords:

@@ -1,4 +1,4 @@
-# 📄 DocuBench
+# DocuBench
 
 **A public benchmark for schema-guided structured extraction from 50 hard, real-world documents.**
 
@@ -12,22 +12,23 @@ Built and maintained by **[DocuPipe](https://www.docupipe.ai)**. Every system �
 
 Most document-AI evaluations stop at clean, single-page PDFs. DocuBench is built to break extraction systems on what real documents actually look like: multi-row arrays and multi-page tables, totals that must reconcile, right-to-left and CJK scripts, rotated scans, handwriting, and ten different file types.
 
-**🏆 [Leaderboard](#-leaderboard) · 🔎 [Explore the results](https://htmlpreview.github.io/?https://github.com/DocuPipe/docubench/blob/main/docubench-explorer.html) · 📊 [Hosted leaderboard](space) · 📑 [Dataset card](docs/dataset-card.md) · 🧮 [Scoring](docs/scoring.md) · ➕ [Submit a system](#-submit-a-new-system)**
+**Explore:** [Leaderboard](#leaderboard) · [Results explorer](https://htmlpreview.github.io/?https://github.com/DocuPipe/docubench/blob/main/docubench-explorer.html) · [Hosted leaderboard](space)  
+**Docs:** [Dataset card](docs/dataset-card.md) · [Scoring](docs/scoring.md) · [Make a submission](#make-a-submission)
 
 ---
 
-## 🏆 Leaderboard
+## Leaderboard
 
 The committed baselines, scored by the public scorer ([`scorer.py`](scorer.py)) against the hand-verified labels. Headline metric is **macro-average field accuracy** with order-independent array matching.
 
-| Rank | System | Model | Accuracy |
-|---:|---|---|---:|
-| 🥇 | **DocuPipe** — high effort | *product* | **97.24%** |
-| 🥈 | **DocuPipe** — standard effort | *product* | **96.00%** |
-| 3 | Gemini | `gemini-3.5-flash` | 95.80% |
-| 4 | GPT | `gpt-5.5` | 93.54% |
-| 5 | Extend | *product* | 92.52% |
-| 6 | Claude | `claude-sonnet-4-6` | 90.33% |
+| Rank | System | Accuracy |
+|---:|---|---:|
+| 🥇 | **DocuPipe** — high effort | **97.24%** |
+| 🥈 | **DocuPipe** — standard effort | **96.00%** |
+| 3 | Gemini | 95.80% |
+| 4 | GPT | 93.54% |
+| 5 | Extend | 92.52% |
+| 6 | Claude | 90.33% |
 
 > DocuPipe built this benchmark, so we hold our own results to the same bar as everyone else: identical schemas, identical labels, the same open scorer, and every raw model output committed under [`results/`](results). Run `docubench score` and you will reproduce this table.
 
@@ -128,7 +129,7 @@ python3 scorer.py results/gpt/PSU5pciM.json schemas/PSU5pciM.json labels/PSU5pci
 
 The full contract — normalization, array matching, blank handling, and known trade-offs — is in [`docs/scoring.md`](docs/scoring.md). Scoring changes are treated as benchmark-version changes.
 
-## ➕ Submit a new system
+## Make a submission
 
 For each document, run your system with the paired schema and write `results/<system_name>/<doc_id>.json`:
 
