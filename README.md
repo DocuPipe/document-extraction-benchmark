@@ -2,13 +2,12 @@
 
 **A public benchmark for schema-guided structured extraction from 50 hard, real-world documents.**
 
-Built and maintained by **[DocuPipe](https://www.docupipe.ai)**. Every system — DocuPipe's included — is scored by the same open scorer against the same hand-verified labels, and every raw output is committed, so anyone can re-verify the numbers.
+Built and maintained by **[DocuPipe](https://www.docupipe.ai)**. Every system, including DocuPipe, is scored by the same open scorer against the same hand-verified labels. 
 
 [![CI](https://github.com/DocuPipe/docubench/actions/workflows/ci.yml/badge.svg)](https://github.com/DocuPipe/docubench/actions/workflows/ci.yml)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-blue.svg)](docs/dataset-card.md)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
-[![Documents: 50](https://img.shields.io/badge/documents-50-green.svg)](SOURCES.md)
 
 Most document-AI evaluations stop at clean, single-page PDFs. DocuBench is built to break extraction systems on what real documents actually look like: multi-row arrays and multi-page tables, totals that must reconcile, right-to-left and CJK scripts, rotated scans, handwriting, and ten different file types.
 
@@ -21,7 +20,6 @@ Most document-AI evaluations stop at clean, single-page PDFs. DocuBench is built
 <h3 align="center"><a href="https://htmlpreview.github.io/?https://github.com/DocuPipe/docubench/blob/main/docubench-explorer.html">🔎&nbsp; Open the interactive results explorer &nbsp;→</a></h3>
 <p align="center">
   Filter all 50 documents by language, length, format &amp; capability · compare six systems · drill into per-document scores.<br>
-  <sub>One self-contained file — <a href="docubench-explorer.html"><code>docubench-explorer.html</code></a> — that also opens straight from disk.</sub>
 </p>
 
 <br>
